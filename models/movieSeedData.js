@@ -1,5 +1,23 @@
 module.exports = [
     {
+        title: "Frozen",
+        year: "2013",
+        director: "Chris Buck",
+        genre: "kid film"
+    },
+    {
+        title: "Lion King",
+        year: "1994",
+        director: "George Scribner",
+        genre: "musical drama"
+    },
+    {
+        title: "Zootopia",
+        year: "2016",
+        director: "Byron howard",
+        genra: "Action comedy"
+    },
+    {
       title: 'Pretty Woman',
       year: '1994',
       director: 'Garry Marshall',
@@ -16,23 +34,26 @@ module.exports = [
         year: '1999',
         director: 'M. Night Shyamalan',
         genre: 'Thriller'
-    },{
+    },
+    {
         title: "Spider-Man: Across the Spider-Verse",
         year: "2023",
         director: "Joaquim Dos Santos",
         genre: "action"
-    },{
+    },
+    {
         title: "Whiplash",
         year: "2014",
         director: "Damien Chazelle",
         genre: "Drama"
-    },{
+    },
+    {
         title: "Interstellar",
         year: "2014",
         director: "Christopher Nolan",
         genre: "Science Fiction"
-    }
-    ,{
+    },
+    {
         title: "The Shawshank Redemption",
         year: 1994,
         director: "Frank Darabont",
@@ -51,4 +72,3 @@ module.exports = [
         genre: "Action"
     }
 ]
-
