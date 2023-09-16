@@ -1,5 +1,22 @@
 module.exports = [
     {
+      title: 'Pretty Woman',
+      year: '1994',
+      director: 'Garry Marshall',
+      genre: 'Romance'
+    },
+    {
+        title: 'True Lies',
+        year: '1994',
+        director: 'James Cameron',
+        genre: 'Action'
+    },
+    {
+        title: 'The Sixth',
+        year: '1999',
+        director: 'M. Night Shyamalan',
+        genre: 'Thriller'
+    },{
         title: "Spider-Man: Across the Spider-Verse",
         year: "2023",
         director: "Joaquim Dos Santos",
@@ -34,3 +51,4 @@ module.exports = [
         genre: "Action"
     }
 ]
+
