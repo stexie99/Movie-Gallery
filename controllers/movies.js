@@ -1,9 +1,15 @@
 const express = require('express')
 const movies = express.Router()
+const Movie = require('../models/movies.js')
 
 // index
 movies.get('/', (req, res) => {
-    res.send('This is the index at /movies')
+    res.send(Movie)
+})
+
+// show
+movies.get('/:id', (req, res) => {
+    res.send(Movie[req.params.id])
 })
 
 module.exports = movies
