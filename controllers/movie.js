@@ -12,4 +12,9 @@ router.get('/', async(req, res)=>{
     res.send(movies)
 })
 
+router.post('/', async(req, res) =>{
+    console.log(req.body)
+    res.send("hello")
+})
+
 module.exports = router
