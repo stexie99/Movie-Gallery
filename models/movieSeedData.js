@@ -15,7 +15,7 @@ module.exports = [
     title: "Zootopia",
     year: "2016",
     director: "Byron howard",
-    genra: "Action comedy",
+    genre: "Action comedy",
   },
   {
     title: "Pretty Woman",

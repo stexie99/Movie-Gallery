@@ -9,7 +9,7 @@ router.get('/data/seed', async (req,res) =>{
 
 router.get('/', async(req, res)=>{
     const movies = await Movie.find()
-    // res.render()
+    res.send(movies)
 })
 
 module.exports = router

@@ -16,6 +16,8 @@ app.get('/', (req, res) => {
 
 // controllers
 app.use('/movies', moviesController)
+app.use(express.urlencoded({ extended: true }))
+
 
 // DB connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
