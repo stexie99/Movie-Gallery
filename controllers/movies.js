@@ -1,6 +1,6 @@
 const express = require('express')
 const movies = express.Router()
-const Movie = require('../models/movies.js')
+const Movie = require('../models/movieSeedData.js')
 
 // index
 movies.get('/', (req, res) => {
