@@ -1,15 +1,15 @@
-const express = require('express')
-const movies = express.Router()
-const Movie = require('../models/movieSeedData.js')
+const router = require('express').Router()
+const Movie = require('../models/movie')
+const movieSeedData = require('../models/movieSeedData.js')
 
-// index
-movies.get('/', (req, res) => {
-    res.send(Movie)
+router.get('/data/seed', async (req,res) =>{
+    await Movie.insertMany(movieSeedData)
+    res.redirect('/movies')
 })
 
-// show
-movies.get('/:id', (req, res) => {
-    res.send(Movie[req.params.id])
+router.get('/', async(req, res)=>{
+    const movies = await Movie.find()
+    // res.render()
 })
 
-module.exports = movies
+module.exports = router

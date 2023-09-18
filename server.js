@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 require ('dotenv').config()
+const moviesController = require('./controllers/movies')
 
 const app = express()
 
@@ -14,7 +15,6 @@ app.get('/', (req, res) => {
 })
 
 // controllers
-const moviesController = require('./controllers/movies.js')
 app.use('/movies', moviesController)
 
 // DB connection
