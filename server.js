@@ -1,25 +1,28 @@
-const express = require('express')
-const mongoose = require('mongoose')
+// modules and globals
 require ('dotenv').config()
-// const moviesController = require('./controllers/movie')
-
+const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
 
 // middleware
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.set('view engine', 'jsx')
-app.set('views', __dirname + '/views')
+app.use(express.static('public'))
+
+// controllers
+app.use('/movies', require('./controllers/movie'))
 
 // routes
 app.get('/', (req, res) => {
-    res.send('Welcome to our BlockBuster App')
+    res.render('home')
 })
 
-// controllers
-const moviesController = require('./controllers/movie')
-app.use('/movies', moviesController)
-// app.use(express.urlencoded({ extended: true }))
+app.get('*', (req, res) => {
+    res.render('Error404')
+})
 
 
 // DB connection
