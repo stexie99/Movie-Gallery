@@ -1,15 +1,18 @@
+// modules and globals
 require ('dotenv').config()
 const express = require('express')
-const mongoose = require('mongoose')
-// const moviesController = require('./controllers/movie')
 const app = express()
+const mongoose = require('mongoose')
 
 // middleware
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 app.set('views', __dirname + '/views')
+
+// controllers
+app.use('/movies', require('./controllers/movie'))
 
 // routes
 app.get('/', (req, res) => {
@@ -19,11 +22,6 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
     res.render('Error404')
 })
-
-// controllers
-const moviesController = require('./controllers/movie')
-app.use('/movies', moviesController)
-// app.use(express.urlencoded({ extended: true }))
 
 
 // DB connection

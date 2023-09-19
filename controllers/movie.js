@@ -7,9 +7,9 @@ router.get('/data/seed', async (req,res) =>{
     res.redirect('/movies')
 })
 
-router.get('/', async(req, res)=>{
+router.get('/', async (req, res)=>{
     const movies = await Movie.find()
-    res.send(movies)
+    res.render('movies/index', {movies})
 })
 
 router.post('/', async(req, res) =>{
