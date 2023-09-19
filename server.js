@@ -1,19 +1,19 @@
+require ('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
-require ('dotenv').config()
 // const moviesController = require('./controllers/movie')
-
 const app = express()
 
 // middleware
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
 app.set('views', __dirname + '/views')
 
 // routes
 app.get('/', (req, res) => {
-    res.send('Welcome to our BlockBuster App')
+    res.render('Home')
 })
 
 // controllers
