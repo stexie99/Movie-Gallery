@@ -6,7 +6,11 @@ function index(data) {
     return (
       <div>
         <h2>{movie.title}</h2>
-        <p>{movie.description}</p>
+        <p>Directed by {movie.director}</p>
+        <p>
+          {movie.genre}, {movie.year}
+        </p>
+        <br />
       </div>
     )
   })

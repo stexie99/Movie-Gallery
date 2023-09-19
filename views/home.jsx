@@ -5,7 +5,10 @@ function Home() {
   return (
     <Default>
       <h1>Home</h1>
-      <p>Welcome to our movie app!</p>
+      <h2>Welcome to our movie app!</h2>
+      <a href="/movies">
+        <button className="btn-primary">Movies Page</button>
+      </a>
     </Default>
   )
 }
