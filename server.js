@@ -1,10 +1,13 @@
 const express = require('express')
 const mongoose = require('mongoose')
 require ('dotenv').config()
+// const moviesController = require('./controllers/movie')
 
 const app = express()
 
 // middleware
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 app.set('view engine', 'jsx')
 app.set('views', __dirname + '/views')
 
@@ -14,8 +17,10 @@ app.get('/', (req, res) => {
 })
 
 // controllers
-const moviesController = require('./controllers/movies.js')
+const moviesController = require('./controllers/movie')
 app.use('/movies', moviesController)
+// app.use(express.urlencoded({ extended: true }))
+
 
 // DB connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
