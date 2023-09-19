@@ -13,7 +13,11 @@ app.set('views', __dirname + '/views')
 
 // routes
 app.get('/', (req, res) => {
-    res.render('Home')
+    res.render('home')
+})
+
+app.get('*', (req, res) => {
+    res.render('Error404')
 })
 
 // controllers
