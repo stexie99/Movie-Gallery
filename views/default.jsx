@@ -1,16 +1,14 @@
-const React = require('react');
+const React = require("react")
 
 function Default(html) {
   return (
     <html>
       <head>
-        <title>React App</title>
+        <title>Default</title>
       </head>
-      <body>
-        Hello World
-      </body>
+      <body>{html.children}</body>
     </html>
-  );
+  )
 }
 
-module.exports = Default;
+module.exports = Default
