@@ -4,6 +4,11 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    poster: {
+        type: String,
+        default: 'https://coltchronicle.org/wp-content/uploads/2022/03/movies-for-newspaper.jpeg',
+        required: true
+    },
     year:{
         type: String,
         required: true

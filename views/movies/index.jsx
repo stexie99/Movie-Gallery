@@ -6,6 +6,7 @@ function index(data) {
     return (
       <div>
         <h2>{movie.title}</h2>
+        <img src={movie.poster} alt={movie.title} />
         <p>Directed by {movie.director}</p>
         <p>
           {movie.genre}, {movie.year}
