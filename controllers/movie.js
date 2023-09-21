@@ -12,9 +12,20 @@ router.get('/', async (req, res)=>{
     res.render('movies/index', {movies})
 })
 
-router.post('/', async(req, res) =>{
-    console.log(req.body)
-    res.send("hello")
-})
+router.post('/', async(req, res) => {
+    Movie.create(req.body)
+    .then(() => {
+      res.redirect('movies')
+    })
+    .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+    })
+  })
+
+
+  router.get('/new', (req, res) => {
+    res.render('movies/new')
+  })
 
 module.exports = router
