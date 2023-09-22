@@ -69,7 +69,7 @@ router.delete('/:name', async (req, res) => {
     const deletedMovie = await Movie.findOneAndDelete({ title: name })
     if (!deletedMovie) {
         res.render('error404')}
-    res.render('index')
+    res.render('home')
     } catch (err) {
         res.render("error404")
     }

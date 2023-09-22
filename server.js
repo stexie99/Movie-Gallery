@@ -1,6 +1,7 @@
 // modules and globals
 require ('dotenv').config()
 const express = require('express')
+const methodOverride= require('method-override')
 const app = express()
 const mongoose = require('mongoose')
 
@@ -11,6 +12,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('public'))
+app.use(methodOverride('_method'))
 
 // controllers
 app.use('/movies', require('./controllers/movie'))
