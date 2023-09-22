@@ -12,6 +12,11 @@ router.get('/', async (req, res)=>{
     res.render('movies/index', {movies})
 })
 
+router.get('/new', (req, res) => {
+    res.render('movies/new')
+})
+
+
 router.get("/:id", (req, res) => {
     Movie.findById(req.params.id)
       .then((movie) => {
@@ -31,10 +36,6 @@ router.post('/', async(req, res) => {
       console.log('err', err)
       res.render('error404')
     })
-  })
-
-  router.get('/new', (req, res) => {
-    res.render('movies/new')
   })
 
 module.exports = router
