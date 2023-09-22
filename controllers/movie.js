@@ -12,6 +12,16 @@ router.get('/', async (req, res)=>{
     res.render('movies/index', {movies})
 })
 
+router.get("/:id", (req, res) => {
+    Movie.findById(req.params.id)
+      .then((movie) => {
+        res.render("movies/show", { movie })
+      })
+      .catch((err) => {
+        res.render("error404")
+      })
+  })
+
 router.post('/', async(req, res) => {
     Movie.create(req.body)
     .then(() => {
@@ -22,7 +32,6 @@ router.post('/', async(req, res) => {
       res.render('error404')
     })
   })
-
 
   router.get('/new', (req, res) => {
     res.render('movies/new')
