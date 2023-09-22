@@ -7,27 +7,15 @@ router.get('/data/seed', async (req,res) =>{
     res.redirect('/movies')
 })
 
-router.get('/', async(req, res)=>{
+router.get('/', async (req, res)=>{
     const movies = await Movie.find()
-    res.send(movies)
+    res.render('movies/index', {movies})
 })
 
-// router.get('/:name', async (req, res) => {
-//     try {
-//       const { name } = req.params
-//       // Create a regex pattern that matches the provided 'name' with case and space insensitivity
-//       const regexPattern = new RegExp(`^${name.replace(/\s+/g, '\\s*')}$`, 'i')
-      
-//       const movie = await Movie.findOne({ title: { $regex: regexPattern } })
-//       //creates search using $regex pattern
-//       if (!movie) {
-//         return res.status(404).json({ error: 'Movie not found' })
-//         }  
-//       res.status(200).json(movie)
-//     } catch (err) {
-//       res.status(500).json(err)
-//     }
-// })
+router.get('/new', (req, res) => {
+    res.render('movies/new')
+})
+
 router.get('/:name', async (req, res) => {
   try {
     const { name } = req.params
@@ -41,11 +29,26 @@ router.get('/:name', async (req, res) => {
   }
 })
 
-router.post('/', async(req, res) =>{
-  await Movie.create(req.body)
-  console.log(req.body)
-  res.send("hello")
-})
+router.get("/:id", (req, res) => {
+    Movie.findById(req.params.id)
+      .then((movie) => {
+        res.render("movies/show", { movie })
+      })
+      .catch((err) => {
+        res.render("error404")
+      })
+  })
+
+router.post('/', async(req, res) => {
+    await Movie.create(req.body)
+    .then(() => {
+      res.redirect('movies')
+    })
+    .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+    })
+  })
 
 router.put('/:name', async(req,res)=>{
   const { name } = req.params
@@ -73,6 +76,8 @@ router.delete('/:name', async (req, res) => {
     console.error('Error:', err)
     res.status(500).json(err)
   }
-})
+
+
+
 
 module.exports = router
