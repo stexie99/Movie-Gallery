@@ -16,18 +16,18 @@ router.get('/new', (req, res) => {
     res.render('movies/new')
 })
 
-router.get('/:name', async (req, res) => {
-  try {
-    const { name } = req.params
-    const movie = await Movie.findOne({ title: name })
-    if (!movie) {
-      return res.status(404).json({ error: 'Movie not found' })
-    }
-    res.status(200).json(movie)
-  } catch (err) {
-    res.render("error404")
-  }
-})
+// router.get('/:name', async (req, res) => {
+//   try {
+//     const { name } = req.params
+//     const movie = await Movie.findOne({ title: name })
+//     if (!movie) {
+//       return res.status(404).json({ error: 'Movie not found' })
+//     }
+//     res.status(200).json(movie)
+//   } catch (err) {
+//     res.render("error404")
+//   }
+// })
 
 router.get("/:id", (req, res) => {
     Movie.findById(req.params.id)
@@ -73,7 +73,7 @@ router.delete('/:name', async (req, res) => {
     res.status(200).json({ message: 'Movie deleted successfully' })
   } catch (err) {
     console.error('Error:', err)
-    res.status(500).json(err)
+    res.render("error404")
   }
 })
 
