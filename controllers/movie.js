@@ -25,7 +25,7 @@ router.get('/:name', async (req, res) => {
     }
     res.status(200).json(movie)
   } catch (err) {
-    res.status(500).json(err)
+    res.render("error404")
   }
 })
 
@@ -45,7 +45,6 @@ router.post('/', async(req, res) => {
       res.redirect('movies')
     })
     .catch(err => {
-      console.log('err', err)
       res.render('error404')
     })
   })
@@ -59,7 +58,7 @@ router.put('/:name', async(req,res)=>{
     }
     res.status(200).json(updatedMovie)
   }catch(err){
-    res.status(500).json(err)
+    res.render("error404")
   }
   console.log('hello')
 })
@@ -76,6 +75,7 @@ router.delete('/:name', async (req, res) => {
     console.error('Error:', err)
     res.status(500).json(err)
   }
+})
 
 
 
