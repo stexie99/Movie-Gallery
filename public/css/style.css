@@ -1,20 +1,26 @@
+/* Globals */
 body {
-  margin-top: 7em;
+  margin-top: 6em;
   display: flex;
   flex-direction: column;
   font-family: Papyrus, fantasy;
   text-align: center;
   font-weight: bold;
   color: pink;
-  text-shadow: 0 0 .1rem white;
+  text-shadow: 0 0 .2rem white;
   background-color: black;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 h1 {
-  font-size: 5rem;
+  font-size: 5em;
   text-align: center;
   color: lavender;
-  padding-top: 1rem;
+  -webkit-text-stroke: 1px white;
 }
 
 h2 {
@@ -32,122 +38,49 @@ p {
   font-family: Arial, Helvetica, sans-serif !important;
   color: rgb(239, 108, 108);
   font-weight: normal;
-  font-size: 1.3em !important;
+  letter-spacing: 0.03em;
+  font-size: 1.4em !important;
   line-height: 1em;
 }
 
-body.home {
-  display: flex;
-  flex-direction: column;
-  font-family: Papyrus, fantasy;
-  text-align: center;
-  font-weight: bold;
-  color: pink;
-  text-shadow: 0 0 .1rem white;
-  background-color: black;
-  background-image: url("https://i.redd.it/ahm5sufp5s051.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 4.5em !important;
+  }
+
+  h2 {
+    font-size: 3em !important;
+  }
 }
 
-body.home h1 {
-  text-shadow: 0 0 .3rem black;
+@media (max-width: 992px) {
+  h1 {
+    font-size: 4em !important;
+  }
+
+  h2 {
+    font-size: 2.75em !important;
+  }
 }
 
-body.home h2 {
-  font-size: 4.4em;
-  color: lavender;
-  text-shadow: 0 0 .3rem black;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em !important;
+  }
+
+  h2 {
+    font-size: 2.5em !important;
+  }
 }
 
-body.favorites h2 {
-  font-size: 2em;
-  color: lavender !important;
-  text-shadow: 0 0 .3rem black;
-}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.5em !important;
+  }
 
-body.show {
-  margin-top: 5em;
-}
-
-body.show h1 {
-  font-family: Papyrus, fantasy;
-  font-size: 5rem !important;
-  text-align: center;
-  color: lavender;
-  text-shadow: 0 0 .3rem black;
-  padding-top: 1rem;
-  margin-bottom: .7em;
-}
-
-.navbar {
-  position: fixed;
-  font-family: Papyrus, fantasy;
-  font-size: 1.1em;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  height: 4em !important;
-  background: linear-gradient(to bottom, rgb(4, 11, 38), rgb(4, 11, 38) 90%, rgba(4, 11, 38, 0)) !important;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: left;
-}
-
-.navbar-nav {
-  margin-left: 1.2em;
-  margin-right: auto;
-}
-
-.nav-link {
-  color: lavender !important;
-  font-size: 1.2em;
-  transition: 0.3s ease-in-out !important;
-}
-
-.nav-link:hover,
-.navbar-brand:hover {
-  color: lavender !important;
-  text-shadow: 0px 0px 10px lavender !important;
-  text-decoration: none;
-  font-size: 1.21em !important;
-  transition: 0.3s ease-in-out !important;
-}
-
-.mt-0 {
-  margin-top: 0 !important;
-}
-
-a:link {
-  color: lavender;
-  transition: color 0.3s ease;
-  text-decoration: none;
-}
-
-a:visited {
-  color: lavender;
-  text-decoration: none;
-}
-
-a:hover {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  text-shadow: 0 0 .3em lavender !important;
-}
-
-a:active {
-  color: green;
-  text-decoration: none;
-}
-
-img {
-  margin: auto;
-  margin-bottom: 1em;
-  width: 75%;
+  h2 {
+    font-size: 2em !important;
+  }
 }
 
 button {
@@ -170,46 +103,45 @@ button:hover {
   transition: 0.3s ease-in-out;
 }
 
-form {
-  max-width: 600px !important;
-  margin: 0 auto;
+button:active {
+  background-color: lavender !important;
+  color: rgb(13, 32, 106) !important;
+  transition: 0.3s ease-in-out !important;
 }
 
-.row {
-  margin: 1em;
-  text-align: center;
-}
-
-.form-control {
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  border: 1px solid #ced4da;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.form-control:focus {
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.img-fluid {
+img {
   margin: auto;
-  margin-top: 1rem;
-  width: 95%;
-}
-
-.col-sm-6 {
-  margin-top: 1em;
   margin-bottom: 1em;
-  text-align: center !important;
+  width: 75%;
 }
 
-.col-md-8 {
-  margin: 0 auto;
-  padding: .75rem;
-  font-size: 1.3rem;
+/* Home view CSS */
+body.home {
+  display: flex;
+  flex-direction: column;
+  font-family: Papyrus, fantasy;
+  text-align: center;
+  font-weight: bold;
+  color: pink;
+  text-shadow: 0 0 .1rem white;
+  background-color: black;
+  background-image: url("https://i.redd.it/ahm5sufp5s051.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.home h1 {
+  text-shadow: 0 0 .3rem black;
+  -webkit-text-stroke: 1px white;
+}
+
+body.home h2 {
+  font-size: 4.4em;
+  color: lavender;
+  text-shadow: 0 0 .3rem black;
+  -webkit-text-stroke: 1px white;
 }
 
 .btn {
@@ -224,6 +156,7 @@ form {
   font-size: 1.5rem;
   padding-top: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  
   transition: 0.3s ease-in-out;
 }
 
@@ -251,6 +184,66 @@ form {
   color: lavender !important;
 }
 
+/* Index view CSS */
+body.favorites h2 {
+  font-size: 2em;
+  color: lavender !important;
+  text-shadow: 0 0 .3rem black;
+}
+
+body.favorites h1 {
+  text-shadow: 0 0 .3rem black;
+  -webkit-text-stroke: 1px white;
+  background: linear-gradient(to bottom, #000000 33%, #ceb0f3 85%, lavender);
+  margin-bottom: .4em;
+}
+
+.col-sm-6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center !important;
+}
+
+/* Show view CSS */
+body.show {
+  margin-top: 5em;
+}
+
+body.show h1 {
+  font-family: Papyrus, fantasy;
+  font-size: 3em !important;
+  text-align: center;
+  color: lavender;
+  text-shadow: 0 0 .3rem black;
+  -webkit-text-stroke: 1px white;
+  background: linear-gradient(to bottom, #000000 33%, #ceb0f3 85%, lavender);
+  padding-top: 1rem;
+  margin-bottom: .7em;
+}
+
+.img-fluid {
+  margin: auto;
+  margin-top: 1rem;
+  width: 95%;
+}
+
+.col-md-4 img {
+  height: 80vh;
+  width: 100%;
+  object-fit: contain;
+}
+
+.col-md-8 {
+  margin: 0 auto;
+  padding: .75rem;
+  font-size: 1.3rem;
+}
+
+.edits {
+  margin-top: .3em;
+  margin-bottom: 3em;
+}
+
 .btn-warning,
 .btn-danger {
   border-radius: .5em;
@@ -268,25 +261,28 @@ form {
   transition: 0.3s ease-in-out;
 }
 
-html,
-body {
-  height: 100%;
+form {
+  max-width: 600px !important;
+  margin: 0 auto;
 }
 
-.mb-4 {
-  color: rgb(94, 94, 157);
-  letter-spacing: 0.1rem;
-  font-size: 2.2rem;
+.row {
+  margin: 1em;
+  text-align: center;
 }
 
-.col-md-4 img {
-  height: 85vh;
-  width: auto;
+.form-control {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.edits {
-  margin-top: .3em;
-  margin-bottom: 3em;
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 @media (min-width: 768px) {
@@ -295,4 +291,140 @@ body {
   .col-md-8 {
     width: 50%;
   }
+}
+
+@media (min-width: 1201px) {
+  body.show h1 {
+    font-size: 3.5em !important;
+  }
+
+  body.show p {
+    font-size: 1.5em !important;
+  }
+
+  body.show img {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  body.show h1 {
+    font-size: 2.8em !important;
+  }
+
+  body.show p {
+    font-size: 1.3em !important;
+  }
+
+  body.show img {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 992px) {
+  body.show h1 {
+    font-size: 2.5em !important;
+  }
+
+  body.show p {
+    font-size: 1.2em !important;
+  }
+
+  body.show img {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 768px) {
+  body.show h1 {
+    font-size: 2em !important;
+  }
+
+  body.show p {
+    font-size: 1em !important;
+  }
+
+  body.show img {
+    height: 60vh;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 576px) {
+  body.show h1 {
+    font-size: 1.5em !important;
+  }
+
+  body.show p {
+    font-size: .8em !important;
+  }
+
+  body.show img {
+    height: 50vh;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+/* Navbar CSS */
+.navbar {
+  position: fixed;
+  font-family: Papyrus, fantasy;
+  font-size: 1.1em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 4em !important;
+  background: linear-gradient(to bottom, rgb(4, 11, 38), rgb(4, 11, 38) 90%, rgba(4, 11, 38, 0)) !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.navbar-nav {
+  margin-left: 1.2em;
+  margin-right: auto;
+}
+
+.nav-link {
+  color: lavender !important;
+  font-size: 1.2em !important;
+  transition: 0.3s ease-in-out !important;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: lavender !important;
+  text-shadow: 0px 0px 10px lavender !important;
+  text-decoration: none;
+  font-size: 1.22em !important;
+  transition: 0.3s ease-in-out !important;
+}
+
+/* Links CSS */
+a:link {
+  color: lavender;
+  font-size: 1em;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lavender;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lavender;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 .9em lavender !important;
+}
+
+a:active {
+  color: rgb(94, 94, 157);
+  text-decoration: none;
 }
