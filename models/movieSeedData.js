@@ -7,7 +7,7 @@ module.exports = [
     genre: "Kids",
   },
   {
-    title: "Lion King",
+    title: "The Lion King",
     poster: "https://m.media-amazon.com/images/I/612YWU3cO1L._AC_SL1000_.jpg",
     year: "1994",
     director: "George Scribner",
@@ -22,7 +22,7 @@ module.exports = [
   },
   {
     title: "Pretty Woman",
-    poster: "https://images-na.ssl-images-amazon.com/images/I/61ETzNx3+sL._AC_UL600_SR600,600_.jpg",
+    poster: "https://xl.movieposterdb.com/21_02/1990/100405/xl_100405_2c0bd2b6.jpg?v=2023-09-14%2003:00:49",
     year: "1994",
     director: "Garry Marshall",
     genre: "Romance",
@@ -64,7 +64,7 @@ module.exports = [
   },
   {
     title: "The Shawshank Redemption",
-    poster: "https://m.media-amazon.com/images/M/MV5BMTQ1ODM2MjY3OV5BMl5BanBnXkFtZTgwMTU2MjEyMDE@._V1_.jpg",
+    poster: "https://xl.movieposterdb.com/05_02/1994/0111161/xl_7266_0111161_d2436dce.jpg?v=2023-01-28%2000:11:44",
     year: "1994",
     director: "Frank Darabont",
     genre: "Drama",
