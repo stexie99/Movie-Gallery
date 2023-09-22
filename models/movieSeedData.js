@@ -104,4 +104,25 @@ module.exports = [
     director: "Anil Sharma",
     genre: "Action",
   },
+  {
+    title: "The Cannonball Run",
+    poster: "https://xl.movieposterdb.com/12_02/1981/82136/xl_82136_e3357ce0.jpg?v=2023-06-04%2007:23:52",
+    year: "1981",
+    director: "Hal Needham",
+    genre: "Action Comedy",
+  },
+  {
+    title: "The Last Unicorn",
+    poster: "https://xl.movieposterdb.com/22_08/1982/84237/xl_84237_379e9f1e.jpg?v=2023-03-01%2023:26:50",
+    year: "1982",
+    director: "Jules Bass",
+    genre: "Fantasy",
+  },
+  {
+    title: "Crouching Tiger, Hidden Dragon",
+    poster: "https://xl.movieposterdb.com/12_04/2000/190332/xl_190332_75a01a76.jpg?v=2023-02-24%2006:29:23",
+    year: "2000",
+    director: "Ang Lee",
+    genre: "Action",
+  },
 ]
