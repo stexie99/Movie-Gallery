@@ -16,33 +16,33 @@ router.get('/new', (req, res) => {
     res.render('movies/new')
 })
 
-// router.get('/:name', async (req, res) => {
-//   try {
-//     const { name } = req.params
-//     const movie = await Movie.findOne({ title: name })
-//     if (!movie) {
-//       return res.status(404).json({ error: 'Movie not found' })
-//     }
-//     res.status(200).json(movie)
-//   } catch (err) {
-//     res.render("error404")
-//   }
-// })
+router.get('/:name', async (req, res) => {
+  try {
+    const { name } = req.params
+    const movie = await Movie.findOne({ title: name })
+    if (!movie) {
+      return res.status(404).json({ error: 'Movie not found' })
+    }
+    res.render("movies/show", { movie })
+  } catch (err) {
+    res.render("error404")
+  }
+})
 
-router.get("/:id", (req, res) => {
-    Movie.findById(req.params.id)
-      .then((movie) => {
-        res.render("movies/show", { movie })
-      })
-      .catch((err) => {
-        res.render("error404")
-      })
-  })
+// router.get("/:id", async (req, res) => {
+//     await Movie.findById(req.params.id)
+//       .then((movie) => {
+//         res.render("movies/show", { movie })
+//       })
+//       .catch(err => {
+//         res.render("error404")
+//       })
+//   })
 
 router.post('/', async(req, res) => {
     await Movie.create(req.body)
     .then(() => {
-      res.redirect('movies')
+      res.redirect('/movies')
     })
     .catch(err => {
       res.render('error404')
@@ -68,13 +68,11 @@ router.delete('/:name', async (req, res) => {
   try {
     const deletedMovie = await Movie.findOneAndDelete({ title: name })
     if (!deletedMovie) {
-      return res.status(404).json({ error: 'Movie not found' })
+        res.render('error404')}
+    res.render('index')
+    } catch (err) {
+        res.render("error404")
     }
-    res.status(200).json({ message: 'Movie deleted successfully' })
-  } catch (err) {
-    console.error('Error:', err)
-    res.render("error404")
-  }
 })
 
 
