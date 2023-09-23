@@ -35,7 +35,7 @@ router.post('/', async(req, res) => {
       if(!createMovie){
         res.render("error404")
       }
-      res.render('home')
+      res.redirect('/movies')
     }catch{
       res.render("error404")
     }
@@ -61,13 +61,10 @@ router.delete('/:name', async (req, res) => {
     const deletedMovie = await Movie.findOneAndDelete({ title: name })
     if (!deletedMovie) {
         res.render('error404')}
-    res.render('home')
+    res.redirect('/movies')
     } catch (err) {
         res.render("error404")
     }
 })
-
-
-
 
 module.exports = router
