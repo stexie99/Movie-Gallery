@@ -2,6 +2,7 @@ const React = require("react")
 const Default = require("../default")
 
 function index(data) {
+  //generates HTML elements for each movie in the data.movies array, creating a visual list of movies with their titles, posters, director names, genres, and release years.
   let moviesFormatted = data.movies.map((movie) => {
     return (
       <div
