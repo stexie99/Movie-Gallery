@@ -49,7 +49,7 @@ router.get("/:id/edit", (req, res) => {
 router.put("/:id", (req, res) => {
   Movie.findByIdAndUpdate(req.params.id, req.body)
     .then(() => {
-      res.redirect('/movies')
+      res.redirect(`/movies/${req.params.id}`)
     })
     .catch((err) => {
       console.log("err", err)
