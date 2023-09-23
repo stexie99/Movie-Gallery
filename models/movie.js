@@ -22,4 +22,11 @@ const movieSchema = new mongoose.Schema({
     }
 })
 
+movieSchema.pre('save', function(next) {
+    if (!this.poster) {
+        this.poster = 'https://coltchronicle.org/wp-content/uploads/2022/03/movies-for-newspaper.jpeg'
+    }
+    next()
+})
+
 module.exports = mongoose.model('Movie', movieSchema)
