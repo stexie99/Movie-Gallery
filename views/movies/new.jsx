@@ -12,6 +12,10 @@ function new_form () {
             <input className="form-control" id="title" name="title" required />
             </div>
             <div className="form-group">
+            <label htmlFor="title">Poster</label>
+            <input className="form-control" id="poster" name="poster" />
+            </div>
+            <div className="form-group">
             <label htmlFor="year">Year</label>
             <input className="form-control" id="year" name="year" />
             </div>
