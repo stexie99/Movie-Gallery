@@ -184,17 +184,23 @@ body.home h2 {
 }
 
 /* Index view CSS */
-body.favorites h2 {
-  font-size: 2em;
-  color: lavender !important;
-  text-shadow: 0 0 .3rem black;
-}
-
 body.favorites h1 {
   text-shadow: 0 0 .3rem black;
   -webkit-text-stroke: 1px white;
   background: linear-gradient(to bottom, #000000 33%, #ceb0f3 85%, lavender);
   margin-bottom: .4em;
+}
+
+body.favorites h2 {
+  font-size: .8em;
+  color: lavender !important;
+  text-shadow: 0 0 .3rem black;
+}
+
+body.favorites p {
+  font-size: .8em !important;
+  color: lavender !important;
+  text-shadow: 0 0 .3rem black;
 }
 
 .col-sm-6 {

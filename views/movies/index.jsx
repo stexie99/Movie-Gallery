@@ -8,12 +8,12 @@ function index(data) {
         key={movie.title}
         className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-2"
       >
-        <h2>
-          <a href={`/movies/${movie.id}`}>{movie.title}</a>
-        </h2>
         <a href={`/movies/${movie.id}`}>
           <img src={movie.poster} alt={movie.title} />
         </a>
+        <h2>
+          <a href={`/movies/${movie.id}`}>{movie.title}</a>
+        </h2>
         <p>Directed by {movie.director}</p>
         <p>
           {movie.genre}, {movie.year}
