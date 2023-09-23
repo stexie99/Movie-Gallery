@@ -25,7 +25,7 @@ function show(data) {
               <p>Genre: {data.movie.genre}</p>
               <div className="edits">
                 <a
-                  href={`/movies/${data.movie.title}/edit`}
+                  href={`/movies/${data.movie.id}/edit`}
                   className="btn btn-warning"
                   style={{ display: "inline-block" }}
                 >
@@ -47,7 +47,7 @@ function show(data) {
                 </a>
                 <form
                   method="POST"
-                  action={`/movies/${data.movie.title}?_method=DELETE`}
+                  action={`/movies/${data.movie.id}?_method=DELETE`}
                   style={{ display: "inline-block" }}
                 >
                   <button type="submit" className="btn btn-danger">
