@@ -1,6 +1,20 @@
 const React = require('react')
 const Def = require('../default.jsx')
-import { yearOptions } from './new'
+
+function yearOptions() {
+    const currentYear = new Date().getFullYear()
+    const years = []
+    // Generate options from 1888 to the current year (2023)
+    // The first ever movie is believed to be Roundhay Garden Scene, made in 2023
+    for (let year = 1888; year <= currentYear; year++) {
+      years.push(
+        <option key={year} value={year}>
+          {year}
+        </option>
+      )
+    }
+    return years
+  }
 
 function edit_form (data) {
     return (

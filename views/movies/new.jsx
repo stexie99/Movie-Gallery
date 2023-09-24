@@ -27,6 +27,7 @@ function new_form () {
             </div>
             <div className="form-group">
             <label htmlFor="title">Poster</label>
+            {/* <p>leave blank if no poster is found</p> */}
             <input className="form-control" id="poster" name="poster" />
             </div>
             <div className="form-group">
@@ -51,4 +52,4 @@ function new_form () {
     )
 }
 
-export { new_form, yearOptions }
+module.exports = new_form
