@@ -14,7 +14,7 @@ function yearOptions() {
       )
     }
     return years
-  }
+}
 
 function edit_form (data) {
     return (
