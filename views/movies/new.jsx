@@ -3,7 +3,7 @@ const Def = require("../default")
 
 function new_form() {
   return (
-    <Def>
+    <Def title="Add a New Movie">
       <body className="new">
         <main>
           <h1>Add a New Movie</h1>

@@ -3,7 +3,7 @@ const Default = require("./default")
 
 function Home() {
   return (
-    <Default title="Movies Home">
+    <Default title="Home">
       <body className="home">
         <h1>Milestone Project 2</h1>
         <h2>Welcome to our movie app!</h2>

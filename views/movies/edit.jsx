@@ -3,7 +3,7 @@ const Def = require("../default.jsx")
 
 function edit_form(data) {
   return (
-    <Def>
+    <Def title="Edit Selection">
       <body className="edit">
         <main>
           <h1>Edit a Movie </h1>
@@ -14,7 +14,7 @@ function edit_form(data) {
                 className="form-control"
                 id="title"
                 name="title"
-                value={data.movie.title}
+                defaultValue={data.movie.title}
               />
             </div>
 
@@ -25,7 +25,7 @@ function edit_form(data) {
                 type="text"
                 id="year"
                 name="year"
-                value={data.movie.year}
+                defaultValue={data.movie.year}
               />
             </div>
             <div className="form-group">
@@ -35,7 +35,7 @@ function edit_form(data) {
                 id="director"
                 type="text"
                 name="director"
-                value={data.movie.director}
+                defaultValue={data.movie.director}
               />
             </div>
             <div className="form-group">
@@ -45,7 +45,7 @@ function edit_form(data) {
                 id="genre"
                 type="text"
                 name="genre"
-                value={data.movie.genre}
+                defaultValue={data.movie.genre}
               />
             </div>
             <div className="form-group">
@@ -55,7 +55,7 @@ function edit_form(data) {
                 id="poster"
                 type="text"
                 name="poster"
-                value={data.movie.poster}
+                defaultValue={data.movie.poster}
               />
             </div>
             <input

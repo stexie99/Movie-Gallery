@@ -3,7 +3,7 @@ const Default = require("../default")
 
 function show(data) {
   return (
-    <Default title="Movie Details">
+    <Default title={data.movie.title}>
       <body className="show">
         <main>
           <div className="row flex-column flex-md-row">
