@@ -21,17 +21,15 @@ function Default(props) {
                 <a className="nav-link" href="/">
                   Home
                 </a>
-              </li>
-
+              </li>{" "}
               <li className="nav-item">
                 <a className="nav-link" href="/movies">
-                  Favorites
+                  Gallery
                 </a>
-              </li>
-
+              </li>{" "}
               <li className="nav-item">
                 <a className="nav-link" href="/movies/new">
-                  Add a Movie!
+                  Add Movie
                 </a>
               </li>
             </ul>

@@ -18,8 +18,8 @@ function index(data) {
     )
   })
   return (
-    <Default title="Favorites">
-      <body className="favorites">
+    <Default title="Gallery">
+      <body className="gallery">
         <main>
           <h1>Movie Gallery</h1>
           <div className="row show-row">{moviesFormatted}</div>
