@@ -20,6 +20,7 @@ h1 {
   font-size: 5em;
   text-align: center;
   color: rgb(244, 232, 207);
+  -webkit-text-stroke: 1px white;
 }
 
 h2 {
@@ -42,79 +43,13 @@ p {
   line-height: 1em;
 }
 
-@media (max-width: 1200px) {
-  h1 {
-    font-size: 4.5em !important;
-  }
-
-  h2 {
-    font-size: 3em !important;
-  }
-}
-
-@media (max-width: 992px) {
-  h1 {
-    font-size: 4em !important;
-  }
-
-  h2 {
-    font-size: 2.75em !important;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 3em !important;
-  }
-
-  h2 {
-    font-size: 2.5em !important;
-  }
-}
-
-@media (max-width: 576px) {
-  h1 {
-    font-size: 2.5em !important;
-  }
-
-  h2 {
-    font-size: 2em !important;
-  }
-}
-
-.btn-primary {
-  background-color: green !important;
-  color: rgb(201, 236, 217) !important;
-  padding: 0rem 2.2rem;
-  margin: 1rem;
-  border-radius: 1rem;
-  border: 1px solid white !important;
-  cursor: pointer;
-  font-size: 2.5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
-  padding-bottom: 8px;
-}
-
-.btn-primary:hover {
-  background-color: green !important;
-  color: rgb(244, 232, 207);
-  transition: 0.3s ease-in-out;
-}
-
-.btn-primary:active {
-  background-color: rgb(244, 232, 207) !important;
-  color: green !important;
-  transition: 0.3s ease-in-out !important;
-}
-
 img {
   margin: auto;
-  margin-bottom: 1em;
   width: 75%;
+  vertical-align: top !important;
 }
 
-/* Home view CSS */
+/* Home view */
 body.home {
   display: flex;
   flex-direction: column;
@@ -143,8 +78,8 @@ body.home h2 {
   -webkit-text-stroke: 1px white;
 }
 
-/* Index view CSS */
-body.favorites {
+/* Gallery/index view */
+body.gallery {
   background-image: url("https://images.pexels.com/photos/2312040/pexels-photo-2312040.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -152,19 +87,19 @@ body.favorites {
   background-attachment: fixed;
 }
 
-body.favorites h1 {
+body.gallery h1 {
   color: rgb(244, 232, 207);
   text-shadow: 0 0 .3rem black;
   -webkit-text-stroke: 1px white;
 }
 
-body.favorites h2 {
+body.gallery h2 {
   font-size: 1.1em;
   color: rgb(244, 232, 207) !important;
   text-shadow: 0 0 .3rem black;
 }
 
-body.favorites p {
+body.gallery p {
   font-size: .8em !important;
   color: rgb(244, 232, 207) !important;
   text-shadow: 0 0 .3rem black;
@@ -176,23 +111,28 @@ body.favorites p {
   text-align: center !important;
 }
 
-.col-sm-6 img, .col-md-6 img, .col-lg-4 img, .col-xl-3 img, .col-xxl-2 img  {
+.col-sm-6 img,
+.col-md-6 img,
+.col-lg-4 img,
+.col-xl-3 img,
+.col-xxl-2 img {
   width: 100%;
   height: auto;
 }
 
+/* specific to gallery */
 .show-row {
-  background-color: rgb(22, 22, 22, 0.75);
+  background-color: rgb(22, 22, 22, 0.65);
 }
 
-/* applies to both index and show view */
+/* applies to both gallery and show view */
 .row {
   text-align: center;
-  margin-left: 15em;
-  margin-right: 15em;
+  margin-left: 5em;
+  margin-right: 5em;
 }
 
-/* Show view CSS */
+/* Show view */
 body.show {
   background-image: url("https://media.npr.org/assets/img/2023/03/08/gettyimages-1145944808_custom-c4059a3b99d086477c3e91fc1058b7122431555e-s1600-c85.webp");
   background-size: cover;
@@ -214,12 +154,11 @@ body.show p {
 
 .img-fluid {
   margin: auto;
-  margin-top: 1rem;
-  width: 95%;
+  width: 100%;
 }
 
 .col-md-4 img {
-  height: 80vh;
+  height: 70vh !important;
   object-fit: contain;
 }
 
@@ -229,24 +168,7 @@ body.show p {
   font-size: 1.3rem;
 }
 
-.edits {
-  margin-top: .3em;
-  margin-bottom: 3em;
-}
-
-.btn-warning,
-.btn-danger {
-  border-radius: .5em;
-  padding: 11px 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1em;
-}
-
-.btn-warning:hover,
-.btn-danger:hover {
-  transition: 0.3s ease-in-out;
-}
-
+/* different viewport size adjustments */
 @media (min-width: 768px) {
 
   .col-md-4,
@@ -255,9 +177,36 @@ body.show p {
   }
 }
 
+@media (max-width: 992px) {
+  .col-md-4 img {
+    height: 60vh !important;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-md-4 img {
+    height: 50vh !important;
+    object-fit: contain;
+  }
+}
+
 @media (min-width: 1201px) {
-  body.show h1 {
+  h1 {
+    font-size: 5em !important;
+  }
+
+  h2 {
     font-size: 3.5em !important;
+  }
+
+  body.show h1,
+  body.gallery h1 {
+    font-size: 3.5em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
   }
 
   body.show p {
@@ -267,43 +216,67 @@ body.show p {
   body.show img {
     height: 80vh;
   }
+
+  .show-row {
+    text-align: center;
+    margin-left: 10em;
+    margin-right: 10em;
+  }
 }
 
 @media (max-width: 1200px) {
-  body.show h1 {
-    font-size: 2.8em !important;
+  h1 {
+    font-size: 4.5em !important;
   }
 
-  body.show p {
-    font-size: 1.3em !important;
-  }
-
-  body.show img {
-    height: 75vh;
-  }
-}
-
-@media (max-width: 992px) {
-  body.show h1 {
-    font-size: 2.5em !important;
+  h2 {
+    font-size: 3em !important;
   }
 
   body.show p {
     font-size: 1.2em !important;
   }
 
-  body.show img {
-    height: 70vh;
+  body.show h1,
+  body.gallery h1 {
+    font-size: 3em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
+  }
+
+  .show-row {
+    text-align: center;
+    margin-left: 9em;
+    margin-right: 9em;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  h1 {
+    font-size: 4em !important;
+  }
+
+  h2 {
+    font-size: 2.75em !important;
+  }
+
+  body.show h1,
+  body.gallery h1 {
+    font-size: 2.67em !important;
+  }
+
   body.show h1 {
-    font-size: 2em !important;
+    margin-top: .7em;
   }
 
   body.show p {
     font-size: 1em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
   }
 
   body.show img {
@@ -311,25 +284,89 @@ body.show p {
     width: 100%;
     object-fit: contain;
   }
+
+  .show-row {
+    text-align: center;
+    margin-left: 8em;
+    margin-right: 8em;
+  }
 }
 
-@media (max-width: 576px) {
-  body.show h1 {
-    font-size: 1.5em !important;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em !important;
+  }
+
+  h2 {
+    font-size: 2.5em !important;
+  }
+
+  body.show h1,
+  body.gallery h1 {
+    font-size: 2.33em !important;
   }
 
   body.show p {
     font-size: .8em !important;
   }
 
-  body.show img {
-    height: 50vh;
-    width: 100%;
-    object-fit: contain;
+  body.gallery h2 {
+    font-size: 1.1em !important;
+  }
+
+  .show-row {
+    text-align: center;
+    margin-left: 5em;
+    margin-right: 5em;
   }
 }
 
-/* forms on both new and edit */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.5em !important;
+  }
+
+  h2 {
+    font-size: 2em !important;
+  }
+
+  body.show h1,
+  body.gallery h1 {
+    font-size: 2em !important;
+  }
+
+  body.show p {
+    font-size: .8em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
+  }
+
+  .show-row {
+    text-align: center;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+}
+
+/* New and Edit views */
+body.edit {
+  background-image: url("https://d8st7idcnjoas.cloudfront.net/galfull/CT-612.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.new label,
+body.edit label {
+  font-size: 1em !important;
+  color: rgb(244, 232, 207) !important;
+  text-shadow: 0 0 .3rem black;
+}
+
+/* forms on both New and Edit */
 form {
   max-width: 600px !important;
   margin: 0 auto;
@@ -358,7 +395,7 @@ body.new {
   background-attachment: fixed;
 }
 
-/* Navbar CSS */
+/* Navbar */
 .navbar {
   position: fixed;
   font-family: Futura;
@@ -392,7 +429,80 @@ body.new {
   transition: 0.3s ease-in-out !important;
 }
 
-/* Links CSS */
+/* Buttons on Home, New, and Edit */
+.btn-primary {
+  background-color: green !important;
+  color: rgb(201, 236, 217) !important;
+  padding: 0rem 2.2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(244, 232, 207) !important;
+  cursor: pointer;
+  font-size: 2.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  padding-bottom: 8px;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: green !important;
+  color: rgb(244, 232, 207) !important;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary:active {
+  background-color: rgb(244, 232, 207) !important;
+  color: green !important;
+  transition: 0.3s ease-in-out !important;
+}
+
+/* Edit (btn-warning) and Delete (btn-danger) buttons */
+.edits {
+  margin-top: .3em;
+  margin-bottom: 3em;
+}
+
+.btn-warning,
+.btn-danger {
+  border-radius: .5em;
+  margin-right: .2em;
+  margin-left: .2em;
+  font-size: 1em;
+  border: 1px solid black !important;
+}
+
+.btn-danger {
+  color:  rgb(244, 232, 207) !important;
+}
+
+.btn-warning {
+  color: black !important;
+}
+
+.btn-warning:hover,
+.btn-danger:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  border: 1px solid rgb(244, 232, 207) !important;
+  color: rgb(244, 232, 207) !important;
+}
+
+.btn-danger:hover {
+  color: black !important;
+}
+
+.btn-warning:hover {
+  background-color: rgb(237, 162, 0) !important;
+}
+
+.btn-warning:active,
+.btn-danger:active {
+  background-color: rgb(244, 232, 207) !important;
+  transition: 0.3s ease-in-out !important;
+}
+
+/* Links */
 a:link {
   color: rgb(244, 232, 207);
   font-size: 1em;

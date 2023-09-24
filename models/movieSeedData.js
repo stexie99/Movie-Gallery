@@ -125,4 +125,23 @@ module.exports = [
     director: "Ang Lee",
     genre: "Action",
   },
+  {
+    title: "Kung Fu Panda",
+    poster: "https://m.media-amazon.com/images/I/81KE5DERc5L._AC_UF894,1000_QL80_.jpg",
+    year: "2008",
+    director: "John Stevenson",
+    genre: "Kids Comedy Family",
+  },
+{
+  title: "The Super Mario Bros",
+  poster: "https://dx35vtwkllhj9.cloudfront.net/universalstudios/super-mario-bros/images/gallery/image9.jpg",
+  year: "2023",
+  director: "Aaron Horvath",
+  genre: "Adventure",
+},
+
+
+
+
+
 ]
