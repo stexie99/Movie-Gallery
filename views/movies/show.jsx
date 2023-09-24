@@ -16,6 +16,7 @@ function show(data) {
             </div>
             <div className="col-md-8">
               <h1>{data.movie.title}</h1>
+              <br />
               <p>
                 Directed by {data.movie.director}
               </p>
@@ -23,6 +24,7 @@ function show(data) {
                 Released: {data.movie.year}
               </p>
               <p>Genre: {data.movie.genre}</p>
+              <br />
               <div className="edits">
                 <a
                   href={`/movies/${data.movie.id}/edit`}

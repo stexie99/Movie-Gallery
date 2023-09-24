@@ -9,17 +9,12 @@ function index(data) {
         key={movie.title}
         className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-2"
       >
-        <h2>
-          <a href={`/movies/${movie.id}`}>{movie.title}</a>
-        </h2>
         <a href={`/movies/${movie.id}`}>
           <img src={movie.poster} alt='Poster not available' />
         </a>
-        <p>Directed by {movie.director}</p>
-        <p>
-          {movie.genre}, {movie.year}
-        </p>
-        <br />
+        <h2>
+          <a href={`/movies/${movie.id}`}>{movie.title}</a>
+        </h2>
       </div>
     )
   })
@@ -27,8 +22,8 @@ function index(data) {
     <Default title="Favorites">
       <body className="favorites">
         <main>
-          <h1>Movies Collection</h1>
-          <div className="row">{moviesFormatted}</div>
+          <h1>Movie Gallery</h1>
+          <div className="row show-row">{moviesFormatted}</div>
         </main>
       </body>
     </Default>

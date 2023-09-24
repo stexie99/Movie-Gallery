@@ -28,7 +28,7 @@ function edit_form (data) {
                         <label htmlFor="poster">Poster </label>
                         <input className="form-control" id="poster" type="text" name="poster" value={data.movie.poster}/>
                     </div>
-                    <input className="btn btn-primary" type="submit" value="Submit Updates"/>
+                    <input className="btn btn-primary" type="submit" value="✎ Submit Updates"/>
                 </form>
             </main>
         </Def>
