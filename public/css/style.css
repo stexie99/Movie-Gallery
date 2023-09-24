@@ -437,6 +437,7 @@ form {
 }
 
 .btn-primary:hover {
+  transform: scale(1.05);
   background-color: green !important;
   color: rgb(244, 232, 207) !important;
   transition: 0.3s ease-in-out;
@@ -463,15 +464,24 @@ form {
   border: 1px solid black !important;
 }
 
+.btn-danger {
+  color:  rgb(244, 232, 207) !important;
+}
+
 .btn-warning {
   color: black !important;
 }
 
 .btn-warning:hover,
 .btn-danger:hover {
+  transform: scale(1.05);
   transition: 0.3s ease-in-out;
   border: 1px solid rgb(244, 232, 207) !important;
   color: rgb(244, 232, 207) !important;
+}
+
+.btn-danger:hover {
+  color: black !important;
 }
 
 .btn-warning:hover {

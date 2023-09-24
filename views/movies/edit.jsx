@@ -3,7 +3,7 @@ const Def = require("../default.jsx")
 
 function edit_form(data) {
   return (
-    <Def title="Edit Selection">
+    <Def title={`Edit ${data.movie.title}`}>
       <body className="edit">
         <main>
           <h1>Edit a Movie </h1>

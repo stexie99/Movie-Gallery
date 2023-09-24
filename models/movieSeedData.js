@@ -4,7 +4,7 @@ module.exports = [
     poster: "https://xl.movieposterdb.com/13_09/2013/2294629/xl_2294629_51b33324.jpg",
     year: "2013",
     director: "Chris Buck",
-    genre: "Animation",
+    genre: "Kids",
   },
   {
     title: "The Lion King",
