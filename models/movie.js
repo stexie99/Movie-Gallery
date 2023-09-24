@@ -22,7 +22,7 @@ const movieSchema = new mongoose.Schema({
         required: true
     }
 })
-
+//gives user a default poster when poster is left blank
 movieSchema.pre('save', function(next) {
     if (!this.poster) {
         this.poster = 'https://coltchronicle.org/wp-content/uploads/2022/03/movies-for-newspaper.jpeg'
