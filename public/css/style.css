@@ -359,6 +359,15 @@ body.edit {
   background-attachment: fixed;
 }
 
+/* New view CSS */
+body.new {
+  background-image: url("movieNewPage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 body.new label,
 body.edit label {
   font-size: 1em !important;
@@ -384,15 +393,6 @@ form {
 .form-control:focus {
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-/* New view CSS */
-body.new {
-  background-image: url("https://d8st7idcnjoas.cloudfront.net/galfull/CT-612.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 /* Navbar */
