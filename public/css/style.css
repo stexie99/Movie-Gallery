@@ -387,6 +387,15 @@ form {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
+/* New view CSS */
+body.new {
+  background-image: url("https://d8st7idcnjoas.cloudfront.net/galfull/CT-612.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
