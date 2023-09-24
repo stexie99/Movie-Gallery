@@ -4,7 +4,8 @@ const Def = require('../default')
 function new_form () {
     return (
         <Def>
-          <main>
+          <main id="newPage">
+            
             <h1>Add a New Movie</h1>
             <form method="POST" action="/movies">
             <div className="form-group">
@@ -29,6 +30,7 @@ function new_form () {
             </div>
          
             <input className="btn btn-primary" type="submit" value="Add Movie" />
+       
             </form>
           </main>
         </Def>
