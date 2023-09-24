@@ -14,11 +14,6 @@ function index(data) {
         <h2>
           <a href={`/movies/${movie.id}`}>{movie.title}</a>
         </h2>
-        <p>Directed by {movie.director}</p>
-        <p>
-          {movie.genre}, {movie.year}
-        </p>
-        <br />
       </div>
     )
   })
@@ -26,8 +21,8 @@ function index(data) {
     <Default title="Favorites">
       <body className="favorites">
         <main>
-          <h1>Movies Collection</h1>
-          <div className="row">{moviesFormatted}</div>
+          <h1>Movie Gallery</h1>
+          <div className="row show-row">{moviesFormatted}</div>
         </main>
       </body>
     </Default>

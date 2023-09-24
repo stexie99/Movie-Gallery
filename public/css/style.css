@@ -19,13 +19,12 @@ body {
 h1 {
   font-size: 5em;
   text-align: center;
-  color: lavender;
-  -webkit-text-stroke: 1px white;
+  color: rgb(244, 232, 207);
 }
 
 h2 {
   font-size: 2em;
-  color: lavender !important;
+  color: rgb(244, 232, 207) !important;
 }
 
 h3,
@@ -83,28 +82,29 @@ p {
   }
 }
 
-button {
-  background-color: lavender;
-  color: rgb(94, 94, 157) !important;
+.btn-primary {
+  background-color: green !important;
+  color: rgb(201, 236, 217) !important;
   padding: 0rem 2.2rem;
   margin: 1rem;
   border-radius: 1rem;
-  border: none;
+  border: 1px solid white !important;
   cursor: pointer;
   font-size: 2.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
+  padding-bottom: 8px;
 }
 
-button:hover {
-  background-color: rgb(13, 32, 106) !important;
-  color: lavender;
+.btn-primary:hover {
+  background-color: green !important;
+  color: rgb(244, 232, 207);
   transition: 0.3s ease-in-out;
 }
 
-button:active {
-  background-color: lavender !important;
-  color: rgb(13, 32, 106) !important;
+.btn-primary:active {
+  background-color: rgb(244, 232, 207) !important;
+  color: green !important;
   transition: 0.3s ease-in-out !important;
 }
 
@@ -124,82 +124,50 @@ body.home {
   color: pink;
   text-shadow: 0 0 .1rem white;
   background-color: black;
-  background-image: url("https://i.redd.it/ahm5sufp5s051.jpg");
+  background-image: url("https://live.staticflickr.com/65535/50243040877_a95ca8b6c8_k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+}
+
+body.home h1 {
+  color: #ed8d00;
+  -webkit-text-stroke: 1px white;
+}
+
+body.home h2 {
+  font-size: 4.4em;
+  color: #ed8d00 !important;
+  text-shadow: 0 0 .3rem black;
+  -webkit-text-stroke: 1px white;
+}
+
+/* Index view CSS */
+body.favorites {
+  background-image: url("https://images.pexels.com/photos/2312040/pexels-photo-2312040.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 
-body.home h1 {
-  text-shadow: 0 0 .3rem black;
-  -webkit-text-stroke: 1px white;
-}
-
-body.home h2 {
-  font-size: 4.4em;
-  color: lavender;
-  text-shadow: 0 0 .3rem black;
-  -webkit-text-stroke: 1px white;
-}
-
-.btn {
-  background-color: rgb(70, 177, 235) !important;
-  color: lavender;
-  padding: 11px 22px;
-  padding-bottom: 5px;
-  margin: 1rem;
-  border-radius: .5em;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  padding-top: 0.5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  
-  transition: 0.3s ease-in-out;
-}
-
-.btn-primary {
-  background-color: lavender;
-  color: lavender;
-  transition: 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-  background-color: lavender;
-  color: lavender !important;
-  transition: 0.3s ease-in-out;
-}
-
-.btn:hover {
-  background-color: lavender;
-  color: lavender !important;
-  transition: 0.3s ease-in-out;
-}
-
-.btn:active {
-  transform: translateY(1px);
-  background-color: lavender !important;
-  color: lavender !important;
-}
-
-/* Index view CSS */
 body.favorites h1 {
+  color: rgb(244, 232, 207);
   text-shadow: 0 0 .3rem black;
   -webkit-text-stroke: 1px white;
-  background: linear-gradient(to bottom, #000000 33%, #ceb0f3 85%, lavender);
-  margin-bottom: .4em;
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 66%, #f89402 85%, rgb(250, 245, 230)); */
 }
 
 body.favorites h2 {
-  font-size: .8em;
-  color: lavender !important;
+  font-size: 1.1em;
+  color: rgb(244, 232, 207) !important;
   text-shadow: 0 0 .3rem black;
 }
 
 body.favorites p {
   font-size: .8em !important;
-  color: lavender !important;
+  color: rgb(244, 232, 207) !important;
   text-shadow: 0 0 .3rem black;
 }
 
@@ -209,21 +177,34 @@ body.favorites p {
   text-align: center !important;
 }
 
+.col-sm-6 img, .col-md-6 img, .col-lg-4 img, .col-xl-3 img, .col-xxl-2 img  {
+  width: 100%;
+  height: auto;
+}
+
+.show-row {
+  background-color: rgb(22, 22, 22, 0.75);
+}
+
+/* applies to both index and show view */
+.row {
+  text-align: center;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
 /* Show view CSS */
 body.show {
-  margin-top: 5em;
+  background-image: url("https://cdn.discordapp.com/attachments/1150156372088983553/1155302162625204274/wp8852963.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body.show h1 {
-  font-family: Futura;
-  font-size: 3em !important;
-  text-align: center;
-  color: lavender;
-  text-shadow: 0 0 .3rem black;
+  color: rgb(244, 232, 207);
   -webkit-text-stroke: 1px white;
-  background: linear-gradient(to bottom, #000000 33%, #ceb0f3 85%, lavender);
-  padding-top: 1rem;
-  margin-bottom: .7em;
 }
 
 .img-fluid {
@@ -234,7 +215,6 @@ body.show h1 {
 
 .col-md-4 img {
   height: 80vh;
-  width: 100%;
   object-fit: contain;
 }
 
@@ -255,39 +235,11 @@ body.show h1 {
   padding: 11px 22px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1em;
-  color: lavender !important;
-  background-color: rgb(94, 94, 157) !important;
 }
 
 .btn-warning:hover,
 .btn-danger:hover {
-  color: rgb(94, 94, 157) !important;
-  background-color: lavender !important;
   transition: 0.3s ease-in-out;
-}
-
-form {
-  max-width: 600px !important;
-  margin: 0 auto;
-}
-
-.row {
-  margin: 1em;
-  text-align: center;
-}
-
-.form-control {
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  border: 1px solid #ced4da;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.form-control:focus {
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 @media (min-width: 768px) {
@@ -372,6 +324,26 @@ form {
   }
 }
 
+/* forms on both new and edit */
+form {
+  max-width: 600px !important;
+  margin: 0 auto;
+}
+
+.form-control {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
 /* Navbar CSS */
 .navbar {
   position: fixed;
@@ -382,7 +354,7 @@ form {
   width: 100%;
   z-index: 1;
   height: 4em !important;
-  background: linear-gradient(to bottom, rgb(4, 11, 38), rgb(4, 11, 38) 90%, rgba(4, 11, 38, 0)) !important;
+  /* background: linear-gradient(to bottom, rgb(4, 11, 38), rgb(4, 11, 38) 90%, rgba(4, 11, 38, 0)) !important; */
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
@@ -394,38 +366,38 @@ form {
 }
 
 .nav-link {
-  color: lavender !important;
+  color: rgb(244, 232, 207) !important;
   font-size: 1.2em !important;
   transition: 0.3s ease-in-out !important;
 }
 
 .nav-link:hover,
 .navbar-brand:hover {
-  color: lavender !important;
-  text-shadow: 0px 0px 10px lavender !important;
+  color: rgb(244, 232, 207) !important;
+  text-shadow: 0px 0px 10px rgb(244, 232, 207) !important;
   text-decoration: none;
   transition: 0.3s ease-in-out !important;
 }
 
 /* Links CSS */
 a:link {
-  color: lavender;
+  color: rgb(244, 232, 207);
   font-size: 1em;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 a:visited {
-  color: lavender;
+  color: rgb(244, 232, 207);
   text-decoration: none;
 }
 
 a:hover {
-  color: lavender;
+  color: rgb(244, 232, 207);
   font-size: 1em;
   text-decoration: none;
   transition: color 0.3s ease;
-  text-shadow: 0 0 .9em lavender !important;
+  text-shadow: 0 0 .9em rgb(244, 232, 207) !important;
 }
 
 a:active {
