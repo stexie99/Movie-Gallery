@@ -12,7 +12,7 @@ function index(data) {
           <a href={`/movies/${movie.id}`}>{movie.title}</a>
         </h2>
         <a href={`/movies/${movie.id}`}>
-          <img src={movie.poster} alt={movie.title} />
+          <img src={movie.poster} alt='Poster not available' />
         </a>
         <p>Directed by {movie.director}</p>
         <p>
