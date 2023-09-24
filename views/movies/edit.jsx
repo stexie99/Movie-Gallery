@@ -1,5 +1,6 @@
 const React = require('react')
 const Def = require('../default.jsx')
+import { yearOptions } from './new'
 
 function edit_form (data) {
     return (
@@ -11,10 +12,11 @@ function edit_form (data) {
                         <label htmlFor="name">Movie Title</label>
                         <input className="form-control" id="title" name="title" value={data.movie.title}/>
                     </div>
-
                     <div className="form-group">
-                        <label htmlFor="year">Release Year </label>
-                        <input className="form-control" type="text" id="year" name="year" value={data.movie.year}/>
+                        <label htmlFor="year">Release Year</label>
+                        <select className="form-control" id="year" name="year" value={data.movie.year}>
+                            {yearOptions()}
+                        </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="director">Director </label>
