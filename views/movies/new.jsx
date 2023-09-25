@@ -32,23 +32,23 @@ function new_form() {
               />
             </div>
             <div className="form-group">
-            <label htmlFor="poster">Poster</label>
-            <input className="form-control" id="poster" name="poster" />
-            <p>leave blank if no poster is found</p>
+              <label htmlFor="director">Director</label>
+              <input className="form-control" id="director" name="director" />
             </div>
             <div className="form-group">
-            <label htmlFor="year">Year</label>
+            <label htmlFor="year">Release Year</label>
             <select className="form-control" id="year" name="year">
               {yearOptions()}
             </select>
             </div>
             <div className="form-group">
-              <label htmlFor="director">Director</label>
-              <input className="form-control" id="director" name="director" />
-            </div>
-            <div className="form-group">
               <label htmlFor="genre">Genre</label>
               <input className="form-control" id="genre" name="genre" />
+            </div>
+            <div className="form-group">
+            <label htmlFor="poster">Poster</label>
+            <input className="form-control" id="poster" name="poster" />
+            <p>leave blank if no poster is found</p>
             </div>
             <input
               className="btn btn-primary"

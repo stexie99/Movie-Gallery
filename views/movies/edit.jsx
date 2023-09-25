@@ -33,6 +33,16 @@ function edit_form(data) {
               />
             </div>
             <div className="form-group">
+              <label htmlFor="director">Director </label>
+              <input
+                className="form-control"
+                id="director"
+                type="text"
+                name="director"
+                defaultValue={data.movie.director}
+              />
+            </div>
+            <div className="form-group">
               <label htmlFor="year">Release Year</label>
               <select
                 className="form-control"
@@ -42,16 +52,6 @@ function edit_form(data) {
               >
                 {yearOptions()}
               </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="director">Director </label>
-              <input
-                className="form-control"
-                id="director"
-                type="text"
-                name="director"
-                defaultValue={data.movie.director}
-              />
             </div>
             <div className="form-group">
               <label htmlFor="genre">Genre </label>
