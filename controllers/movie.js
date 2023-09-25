@@ -14,59 +14,75 @@ router.get("/", async (req, res) => {
 })
 // create new movie
 router.post("/", async (req, res) => {
-  await Movie.create(req.body)
-    .then(() => {
-      res.redirect("movies")
-    })
-    .catch((err) => {
+  try{
+    const createMovie = await Movie.create(req.body)
+    if(!createMovie){
       res.render("error404")
-    })
+    }
+    res.redirect("movies")
+  }catch(err){
+    console.log(err)
+    res.render("error404")
+  }
 })
 //get new page
 router.get("/new", (req, res) => {
   res.render("movies/new")
 })
-//get movie by index
-router.get("/:id", (req, res) => {
-  Movie.findById(req.params.id)
-    .then((movie) => {
-      res.render("movies/show", { movie })
-    })
-    .catch((err) => {
-      res.render("error404")
-    })
-})
 //get edit page
-router.get("/:id/edit", (req, res) => {
-  Movie.findById(req.params.id)
-    .then((movie) => {
-      res.render("movies/edit", { movie })
-    })
-    .catch((err) => {
+router.get("/:id/edit", async (req, res) => {
+  try{
+    const { id } = req.params
+    const movie = await Movie.findById(id)
+    if(!movie){
       res.render("error404")
-    })
+    }
+    res.render("movies/edit", { movie })
+  }catch(err){
+    console.log(err)
+    res.render("error404")
+  }
 })
-//edit movie 
-router.put("/:id", (req, res) => {
-  Movie.findByIdAndUpdate(req.params.id, req.body)
-    .then(() => {
-      res.redirect(`/movies/${req.params.id}`)
-    })
-    .catch((err) => {
-      console.log("err", err)
+//get movie by index
+router.get("/:id", async (req, res) => {
+  try{
+    const movie = await Movie.findById(req.params.id)
+    if(!movie){
       res.render("error404")
-    })
+    }
+    res.render("movies/show", { movie })
+  }catch(err){
+    console.log(err)
+    res.render("error404")
+  }
+})
+
+//edit movie 
+router.put("/:id", async (req, res) => {
+  const { id } = req.params
+  try{
+    const movie = await Movie.findByIdAndUpdate(id, req.body)
+    if(!movie){
+      res.render("error404")
+    }
+    res.redirect(`/movies/${req.params.id}`)
+    }catch(err){
+      console.log(err)
+      res.render("error404")
+    }
 })
 //delete movie by index
-router.delete("/:id", (req, res) => {
-  Movie.findByIdAndDelete(req.params.id)
-    .then(() => {
-      res.redirect("/movies")
-    })
-    .catch((err) => {
-      console.log("err", err)
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params
+  try{
+    const movie = await Movie.findByIdAndDelete(id)
+    if(!movie){
       res.render("error404")
-    })
+    }
+    res.redirect("/movies")
+  }catch(err){
+    console.log(err)
+    res.render("error404")}
 })
 
 module.exports = router
