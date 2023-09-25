@@ -1,25 +1,28 @@
-#Milestone-2-Project-The-Movie-Gallery
+### Milestone-2-Project-The-Movie-Gallery
 
-The Movie Gallery project presents a collection of movies that is certain to satisfy a broad audience.
+The Movie Gallery project offers the opportunity for anyone to add and edit movies in their collection.
 This app was designed with the user in mind. We made a point to focus on making the app visually pleasing 
-with a smooth transition from one screen to the next. Our ultimate goal was to maintain optimal functionality
-of the backend that translates to a seemless frontend. 
+with a smooth transition from one screen to the next. Our ultimate goal is to maintain optimal backend functionality that translates to a seamless front-end. 
 
-The project is designed using the MERN full stack application developmental practices that implement full
-CRUD functionality.
+The project is designed using the MERN (MongoDb Express React Node) full-stack application developmental practices that implement full
+CRUD (Create Read Update Delete) functionality.
 
-#References:
+## References:
 
-W3W Schools (https://www.w3schools.com)
+[W3W Schools](https://www.w3schools.com)
 
-YouTube - MERN Videos
- - React Movie App Tutorial
+[stack overflow](https://stackoverflow.com/)
 
-  overflow: hidden;
-  overoverflow: ;hiddenOpen AI
-- used to aid with formatting, CSS , CLI and installation issues
- 
-#App background image source links:
+[Rest-rant project from backend](https://github.com/michaelangelesz/project-REST-rant)
+
+[GPT engine 3.5](chat.openai.com)
+used to aid with formatting, CSS, CLI, and installation issues
+
+## Extra resources:
+
+[bootstrap](https://www.bootstrapcdn.com/)
+
+## App background image source links:
 
 [Home page cinema background](https://www.flickr.com/photos/sharkypics/50243040877/)
 
@@ -38,4 +41,4 @@ All movie posters sourced from [movieposterdb.com](https://www.movieposterdb.com
 
 [Background for New.jsx page](https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais)
 
-[Background for Edit.jsx page](https://img.freepik.com/free-vector/open-clapper-board-with-film-strip-background-design_1017-26102.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais)
+[Background for Edit.jsx page](https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais)
