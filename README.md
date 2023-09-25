@@ -1,4 +1,4 @@
-### Milestone-2-Project-The-Movie-Gallery
+# Milestone-2-Project-The-Movie-Gallery
 
 The Movie Gallery project offers the opportunity for anyone to add and edit movies in their collection.
 This app was designed with the user in mind. We made a point to focus on making the app visually pleasing 
