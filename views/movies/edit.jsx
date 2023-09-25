@@ -2,18 +2,18 @@ const React = require("react")
 const Def = require("../default.jsx")
 
 function yearOptions() {
-    const currentYear = new Date().getFullYear()
-    const years = []
-    // Generate options from 1888 to the current year (2023)
-    // The first ever movie is believed to be Roundhay Garden Scene, made in 2023
-    for (let year = 1888; year <= currentYear; year++) {
-      years.push(
-        <option key={year} value={year}>
-          {year}
-        </option>
-      )
-    }
-    return years
+  const currentYear = new Date().getFullYear()
+  const years = []
+  // Generate options from 1888 to the current year (2023)
+  // The first ever movie is believed to be Roundhay Garden Scene, made in 2023
+  for (let year = 1888; year <= currentYear; year++) {
+    years.push(
+      <option key={year} value={year}>
+        {year}
+      </option>
+    )
+  }
+  return years
 }
 
 function edit_form(data) {
@@ -33,10 +33,15 @@ function edit_form(data) {
               />
             </div>
             <div className="form-group">
-                        <label htmlFor="year">Release Year</label>
-                        <select className="form-control" id="year" name="year" value={data.movie.year}>
-                            {yearOptions()}
-                        </select>
+              <label htmlFor="year">Release Year</label>
+              <select
+                className="form-control"
+                id="year"
+                name="year"
+                defaultValue={data.movie.year}
+              >
+                {yearOptions()}
+              </select>
             </div>
             <div className="form-group">
               <label htmlFor="director">Director </label>
@@ -79,6 +84,5 @@ function edit_form(data) {
     </Def>
   )
 }
-
 
 module.exports = edit_form
