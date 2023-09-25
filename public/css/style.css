@@ -64,6 +64,7 @@ body.home {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 body.home h1 {
@@ -103,6 +104,16 @@ body.gallery p {
   font-size: .8em !important;
   color: rgb(244, 232, 207) !important;
   text-shadow: 0 0 .3rem black;
+}
+
+a img {
+  padding-bottom: 7px;
+  transition: 0.3s ease-in-out !important;
+}
+
+a:hover img {
+  transform: scale(1.025);
+  transition: 0.2s ease-in-out !important;
 }
 
 .col-sm-6 {
@@ -359,13 +370,13 @@ body.edit {
   background-attachment: fixed;
 }
 
-/* New view CSS */
 body.new {
-  background-image: url("movieNewPage.jpg");
+  background-image: url("/images/movieNewPage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 body.new label,
@@ -393,6 +404,15 @@ form {
 .form-control:focus {
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Error404 view */
+body.error404 {
+  background-image: url("https://d8st7idcnjoas.cloudfront.net/galfull/CT-612.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Navbar */
