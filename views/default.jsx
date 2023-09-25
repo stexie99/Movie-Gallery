@@ -6,6 +6,7 @@ function Default(props) {
       <head>
         <title>{props.title}</title>
         <link rel="icon" type="image/png" href="/images/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet"></link>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -21,17 +22,15 @@ function Default(props) {
                 <a className="nav-link" href="/">
                   Home
                 </a>
-              </li>
-
+              </li>{" "}
               <li className="nav-item">
                 <a className="nav-link" href="/movies">
-                  Favorites
+                  Gallery
                 </a>
-              </li>
-
+              </li>{" "}
               <li className="nav-item">
                 <a className="nav-link" href="/movies/new">
-                  Add a Movie!
+                  Add Movie
                 </a>
               </li>
             </ul>

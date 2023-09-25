@@ -3,7 +3,7 @@ body {
   margin-top: 6em;
   display: flex;
   flex-direction: column;
-  font-family: Futura;
+  font-family: 'Lato', sans-serif;
   text-align: center;
   font-weight: bold;
   color: pink;
@@ -19,28 +19,221 @@ body {
 h1 {
   font-size: 5em;
   text-align: center;
-  color: lavender;
+  color: rgb(244, 232, 207);
   -webkit-text-stroke: 1px white;
 }
 
 h2 {
   font-size: 2em;
-  color: lavender !important;
+  color: rgb(244, 232, 207) !important;
 }
 
 h3,
 h4 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1em;
+  font-family: 'Lato', sans-serif;
+  font-size: .7em;
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif !important;
-  color: rgb(239, 108, 108);
+  font-family: 'Lato', sans-serif;
+  color: rgb(244, 232, 207);
   font-weight: normal;
   letter-spacing: 0.03em;
-  font-size: 1.4em !important;
+  font-size: .7em !important;
   line-height: 1em;
+}
+
+img {
+  margin: auto;
+  width: 75%;
+  vertical-align: top !important;
+}
+
+/* Home view */
+body.home {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: pink;
+  text-shadow: 0 0 .1rem white;
+  background-color: black;
+  background-image: url("https://live.staticflickr.com/65535/50243040877_a95ca8b6c8_k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+body.home h1 {
+  color: #ed8d00;
+  -webkit-text-stroke: 1px white;
+}
+
+body.home h2 {
+  font-size: 4.4em;
+  color: #ed8d00 !important;
+  text-shadow: 0 0 .3rem black;
+  -webkit-text-stroke: 1px white;
+}
+
+/* Gallery/index view */
+body.gallery {
+  background-image: url("https://images.pexels.com/photos/2312040/pexels-photo-2312040.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.gallery h1 {
+  color: rgb(244, 232, 207);
+  text-shadow: 0 0 .3rem black;
+  -webkit-text-stroke: 1px white;
+}
+
+body.gallery h2 {
+  font-size: 1.1em;
+  color: rgb(244, 232, 207) !important;
+  text-shadow: 0 0 .3rem black;
+}
+
+body.gallery p {
+  font-size: .8em !important;
+  color: rgb(244, 232, 207) !important;
+  text-shadow: 0 0 .3rem black;
+}
+
+a img {
+  padding-bottom: 7px;
+  transition: 0.3s ease-in-out !important;
+}
+
+a:hover img {
+  transform: scale(1.025);
+  transition: 0.2s ease-in-out !important;
+}
+
+.col-sm-6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center !important;
+}
+
+.col-sm-6 img,
+.col-md-6 img,
+.col-lg-4 img,
+.col-xl-3 img,
+.col-xxl-2 img {
+  width: 100%;
+  height: auto;
+}
+
+/* specific to gallery */
+.show-row {
+  background-color: rgb(22, 22, 22, 0.65);
+}
+
+/* applies to both gallery and show view */
+.row {
+  text-align: center;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+/* Show view */
+body.show {
+  background-image: url("https://media.npr.org/assets/img/2023/03/08/gettyimages-1145944808_custom-c4059a3b99d086477c3e91fc1058b7122431555e-s1600-c85.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.show h1 {
+  color: rgb(244, 232, 207);
+  -webkit-text-stroke: 1px white;
+}
+
+body.show p {
+  font-size: .7em !important;
+  color: rgb(244, 232, 207) !important;
+  text-shadow: 0 0 .3rem black;
+}
+
+.img-fluid {
+  margin: auto;
+  width: 100%;
+}
+
+.col-md-4 img {
+  height: 70vh !important;
+  object-fit: contain;
+}
+
+.col-md-8 {
+  margin: 0 auto;
+  padding: .75rem;
+  font-size: 1.3rem;
+}
+
+/* different viewport size adjustments */
+@media (min-width: 768px) {
+
+  .col-md-4,
+  .col-md-8 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-md-4 img {
+    height: 60vh !important;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-md-4 img {
+    height: 50vh !important;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1201px) {
+  h1 {
+    font-size: 5em !important;
+  }
+
+  h2 {
+    font-size: 3.5em !important;
+  }
+
+  body.show h1,
+  body.gallery h1,
+  body.error404 h1 {
+    font-size: 3.5em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
+  }
+
+  body.show p {
+    font-size: 1.5em !important;
+  }
+
+  body.show img {
+    height: 80vh;
+  }
+
+  .show-row {
+    text-align: center;
+    margin-left: 10em;
+    margin-right: 10em;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -50,6 +243,26 @@ p {
 
   h2 {
     font-size: 3em !important;
+  }
+
+  body.show p {
+    font-size: 1.2em !important;
+  }
+
+  body.show h1,
+  body.gallery h1,
+  body.error404 h1 {
+    font-size: 3em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
+  }
+
+  .show-row {
+    text-align: center;
+    margin-left: 9em;
+    margin-right: 9em;
   }
 }
 
@@ -61,6 +274,36 @@ p {
   h2 {
     font-size: 2.75em !important;
   }
+
+  body.show h1,
+  body.gallery h1,
+  body.error404 h1 {
+    font-size: 2.67em !important;
+  }
+
+  body.show h1 {
+    margin-top: .7em;
+  }
+
+  body.show p {
+    font-size: 1em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
+  }
+
+  body.show img {
+    height: 60vh;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .show-row {
+    text-align: center;
+    margin-left: 8em;
+    margin-right: 8em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -70,6 +313,26 @@ p {
 
   h2 {
     font-size: 2.5em !important;
+  }
+
+  body.show h1,
+  body.gallery h1,
+  body.error404 h1 {
+    font-size: 2.33em !important;
+  }
+
+  body.show p {
+    font-size: .8em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
+  }
+
+  .show-row {
+    text-align: center;
+    margin-left: 5em;
+    margin-right: 5em;
   }
 }
 
@@ -81,197 +344,62 @@ p {
   h2 {
     font-size: 2em !important;
   }
+
+  body.show h1,
+  body.gallery h1,
+  body.error404 h1 {
+    font-size: 2em !important;
+  }
+
+  body.show p {
+    font-size: .8em !important;
+  }
+
+  body.gallery h2 {
+    font-size: 1.1em !important;
+  }
+
+  .show-row {
+    text-align: center;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
 }
 
-button {
-  background-color: lavender;
-  color: rgb(94, 94, 157) !important;
-  padding: 0rem 2.2rem;
-  margin: 1rem;
-  border-radius: 1rem;
-  border: none;
-  cursor: pointer;
-  font-size: 2.5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: rgb(13, 32, 106) !important;
-  color: lavender;
-  transition: 0.3s ease-in-out;
-}
-
-button:active {
-  background-color: lavender !important;
-  color: rgb(13, 32, 106) !important;
-  transition: 0.3s ease-in-out !important;
-}
-
-img {
-  margin: auto;
-  margin-bottom: 1em;
-  width: 75%;
-}
-
-/* Home view CSS */
-body.home {
-  display: flex;
-  flex-direction: column;
-  font-family: Futura;
-  text-align: center;
-  font-weight: bold;
-  color: pink;
-  text-shadow: 0 0 .1rem white;
-  background-color: black;
-  background-image: url("https://i.redd.it/ahm5sufp5s051.jpg");
+/* New and Edit views */
+body.edit {
+  background-image: url("https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
-body.home h1 {
-  text-shadow: 0 0 .3rem black;
-  -webkit-text-stroke: 1px white;
+body.new {
+  background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
-body.home h2 {
-  font-size: 4.4em;
-  color: lavender;
-  text-shadow: 0 0 .3rem black;
-  -webkit-text-stroke: 1px white;
-}
-
-.btn {
-  background-color: rgb(70, 177, 235) !important;
-  color: lavender;
-  padding: 11px 22px;
-  padding-bottom: 5px;
-  margin: 1rem;
-  border-radius: .5em;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  padding-top: 0.5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  
-  transition: 0.3s ease-in-out;
-}
-
-.btn-primary {
-  background-color: lavender;
-  color: lavender;
-  transition: 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-  background-color: lavender;
-  color: lavender !important;
-  transition: 0.3s ease-in-out;
-}
-
-.btn:hover {
-  background-color: lavender;
-  color: lavender !important;
-  transition: 0.3s ease-in-out;
-}
-
-.btn:active {
-  transform: translateY(1px);
-  background-color: lavender !important;
-  color: lavender !important;
-}
-
-/* Index view CSS */
-body.favorites h2 {
-  font-size: 2em;
-  color: lavender !important;
+body.new label,
+body.edit label {
+  font-size: 1em !important;
+  color: rgb(244, 232, 207) !important;
   text-shadow: 0 0 .3rem black;
 }
 
-body.favorites h1 {
-  text-shadow: 0 0 .3rem black;
-  -webkit-text-stroke: 1px white;
-  background: linear-gradient(to bottom, #000000 33%, #ceb0f3 85%, lavender);
-  margin-bottom: .4em;
-}
-
-.col-sm-6 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-align: center !important;
-}
-
-/* Show view CSS */
-body.show {
-  margin-top: 5em;
-}
-
-body.show h1 {
-  font-family: Futura;
-  font-size: 3em !important;
-  text-align: center;
-  color: lavender;
-  text-shadow: 0 0 .3rem black;
-  -webkit-text-stroke: 1px white;
-  background: linear-gradient(to bottom, #000000 33%, #ceb0f3 85%, lavender);
-  padding-top: 1rem;
-  margin-bottom: .7em;
-}
-
-.img-fluid {
-  margin: auto;
-  margin-top: 1rem;
-  width: 95%;
-}
-
-.col-md-4 img {
-  height: 80vh;
-  width: 100%;
-  object-fit: contain;
-}
-
-.col-md-8 {
-  margin: 0 auto;
-  padding: .75rem;
-  font-size: 1.3rem;
-}
-
-.edits {
-  margin-top: .3em;
-  margin-bottom: 3em;
-}
-
-.btn-warning,
-.btn-danger {
-  border-radius: .5em;
-  padding: 11px 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1em;
-  color: lavender !important;
-  background-color: rgb(94, 94, 157) !important;
-}
-
-.btn-warning:hover,
-.btn-danger:hover {
-  color: rgb(94, 94, 157) !important;
-  background-color: lavender !important;
-  transition: 0.3s ease-in-out;
-}
-
+/* forms on both New and Edit */
 form {
   max-width: 600px !important;
   margin: 0 auto;
 }
 
-.row {
-  margin: 1em;
-  text-align: center;
-}
-
 .form-control {
-  font-family: Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -284,99 +412,25 @@ form {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-@media (min-width: 768px) {
-
-  .col-md-4,
-  .col-md-8 {
-    width: 50%;
-  }
+/* Error404 view */
+body.error404 {
+  background-image: url("https://d8st7idcnjoas.cloudfront.net/galfull/CT-612.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-@media (min-width: 1201px) {
-  body.show h1 {
-    font-size: 3.5em !important;
-  }
-
-  body.show p {
-    font-size: 1.5em !important;
-  }
-
-  body.show img {
-    height: 80vh;
-  }
-}
-
-@media (max-width: 1200px) {
-  body.show h1 {
-    font-size: 2.8em !important;
-  }
-
-  body.show p {
-    font-size: 1.3em !important;
-  }
-
-  body.show img {
-    height: 75vh;
-  }
-}
-
-@media (max-width: 992px) {
-  body.show h1 {
-    font-size: 2.5em !important;
-  }
-
-  body.show p {
-    font-size: 1.2em !important;
-  }
-
-  body.show img {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 768px) {
-  body.show h1 {
-    font-size: 2em !important;
-  }
-
-  body.show p {
-    font-size: 1em !important;
-  }
-
-  body.show img {
-    height: 60vh;
-    width: 100%;
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 576px) {
-  body.show h1 {
-    font-size: 1.5em !important;
-  }
-
-  body.show p {
-    font-size: .8em !important;
-  }
-
-  body.show img {
-    height: 50vh;
-    width: 100%;
-    object-fit: contain;
-  }
-}
-
-/* Navbar CSS */
+/* Navbar */
 .navbar {
   position: fixed;
-  font-family: Futura;
+  font-family: 'Lato', sans-serif;
   font-size: 1.1em;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1;
   height: 4em !important;
-  background: linear-gradient(to bottom, rgb(4, 11, 38), rgb(4, 11, 38) 90%, rgba(4, 11, 38, 0)) !important;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
@@ -388,38 +442,111 @@ form {
 }
 
 .nav-link {
-  color: lavender !important;
+  color: rgb(244, 232, 207) !important;
+  /* -webkit-text-stroke: 1px black; */
   font-size: 1.2em !important;
   transition: 0.3s ease-in-out !important;
 }
 
 .nav-link:hover,
 .navbar-brand:hover {
-  color: lavender !important;
-  text-shadow: 0px 0px 10px lavender !important;
+  color: rgb(244, 232, 207) !important;
   text-decoration: none;
   transition: 0.3s ease-in-out !important;
 }
 
-/* Links CSS */
+/* Buttons on Home, New, and Edit */
+.btn-primary {
+  background-color: green !important;
+  color: rgb(201, 236, 217) !important;
+  padding: 0rem 2.2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(244, 232, 207) !important;
+  cursor: pointer;
+  font-size: 2.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  padding-bottom: 4px;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: green !important;
+  color: rgb(244, 232, 207) !important;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary:active {
+  background-color: rgb(244, 232, 207) !important;
+  color: green !important;
+  transition: 0.3s ease-in-out !important;
+}
+
+/* Edit (btn-warning) and Delete (btn-danger) buttons */
+.edits {
+  margin-top: .3em;
+  margin-bottom: 3em;
+}
+
+.btn-warning,
+.btn-danger {
+  border-radius: .5em;
+  margin-right: .2em;
+  margin-left: .2em;
+  font-size: 1em;
+  border: 1px solid black !important;
+}
+
+.btn-danger {
+  color:  rgb(244, 232, 207) !important;
+}
+
+.btn-warning {
+  color: black !important;
+}
+
+.btn-warning:hover,
+.btn-danger:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  border: 1px solid rgb(244, 232, 207) !important;
+  color: rgb(244, 232, 207) !important;
+}
+
+.btn-danger:hover {
+  color: black !important;
+}
+
+.btn-warning:hover {
+  background-color: rgb(237, 162, 0) !important;
+}
+
+.btn-warning:active,
+.btn-danger:active {
+  background-color: rgb(244, 232, 207) !important;
+  transition: 0.3s ease-in-out !important;
+}
+
+/* Links */
 a:link {
-  color: lavender;
+  color: rgb(244, 232, 207);
   font-size: 1em;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 a:visited {
-  color: lavender;
+  color: rgb(244, 232, 207);
   text-decoration: none;
 }
 
 a:hover {
-  color: lavender;
+  color: rgb(244, 232, 207);
   font-size: 1em;
   text-decoration: none;
   transition: color 0.3s ease;
-  text-shadow: 0 0 .9em lavender !important;
+  text-shadow: 0 0 .9em rgb(244, 232, 207) !important;
 }
 
 a:active {
