@@ -1,11 +1,11 @@
 #Milestone-2-Project-The-Movie-Gallery
 
 The Movie Gallery project presents a collection of movies that is certain to satisfy a broad audience.
-This app was designed with the user in mind. We made point to focus on making the app visually pleasing 
+This app was designed with the user in mind. We made a point to focus on making the app visually pleasing 
 with a smooth transition from one screen to the next. Our ultimate goal was to maintain optimal functionality
-of the backend that translated to a seemless frontend. 
+of the backend that translates to a seemless frontend. 
 
-The project is desied using the MERN full stack application developmental practices that imhttps://img.freepik.com/free-photo/movie-background-collage_23-2149876004.jpg?w=1380&t=st=1695623940~exp=1695624540~hmac=c45d99928819d57836fe95d11276e40206c4c3bed3777c800ad524e6d946b8da"ement full
+The project is designed using the MERN full stack application developmental practices that implement full
 CRUD functionality.
 
 #References:
