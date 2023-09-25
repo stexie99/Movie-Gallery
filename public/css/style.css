@@ -212,7 +212,8 @@ body.show p {
   }
 
   body.show h1,
-  body.gallery h1 {
+  body.gallery h1,
+  body.error404 h1 {
     font-size: 3.5em !important;
   }
 
@@ -249,7 +250,8 @@ body.show p {
   }
 
   body.show h1,
-  body.gallery h1 {
+  body.gallery h1,
+  body.error404 h1 {
     font-size: 3em !important;
   }
 
@@ -274,7 +276,8 @@ body.show p {
   }
 
   body.show h1,
-  body.gallery h1 {
+  body.gallery h1,
+  body.error404 h1 {
     font-size: 2.67em !important;
   }
 
@@ -313,7 +316,8 @@ body.show p {
   }
 
   body.show h1,
-  body.gallery h1 {
+  body.gallery h1,
+  body.error404 h1 {
     font-size: 2.33em !important;
   }
 
@@ -342,7 +346,8 @@ body.show p {
   }
 
   body.show h1,
-  body.gallery h1 {
+  body.gallery h1,
+  body.error404 h1 {
     font-size: 2em !important;
   }
 
