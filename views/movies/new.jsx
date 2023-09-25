@@ -5,7 +5,7 @@ function yearOptions() {
   const currentYear = new Date().getFullYear()
   const years = []
   // Generate options from 1888 to the current year (2023)
-  // The first ever movie is believed to be Roundhay Garden Scene, made in 2023
+  // The first ever movie is believed to be Roundhay Garden Scene, made in 1888
   for (let year = 1888; year <= currentYear; year++) {
     years.push(
       <option key={year} value={year}>
