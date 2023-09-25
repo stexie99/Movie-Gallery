@@ -27,8 +27,8 @@ function new_form () {
             </div>
             <div className="form-group">
             <label htmlFor="title">Poster</label>
-            <p>leave blank if no poster is found</p>
             <input className="form-control" id="poster" name="poster" />
+            <p>leave blank if no poster is found</p>
             </div>
             <div className="form-group">
             <label htmlFor="year">Year</label>
