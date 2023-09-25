@@ -232,7 +232,7 @@ module.exports = [
   },
   {
     title: "Gone with the Wind",
-    poster: "https://xl.movieposterdb.com/14_01/1939/39526/xl_39526_5b6b2b9e.jpg?v=2023-09-22%2016:39:41",
+    poster: "https://xl.movieposterdb.com/07_11/1939/31381/xl_31381_035f678b.jpg?v=2023-08-22%2020:25:45",
     year: "1939",
     director: "Victor Fleming",
     genre: "Drama, History, Romance",
