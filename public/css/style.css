@@ -3,7 +3,7 @@ body {
   margin-top: 6em;
   display: flex;
   flex-direction: column;
-  font-family: Futura;
+  font-family: 'Lato', sans-serif;
   text-align: center;
   font-weight: bold;
   color: pink;
@@ -30,12 +30,12 @@ h2 {
 
 h3,
 h4 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: .7em;
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: 'Lato', sans-serif;
   color: rgb(244, 232, 207);
   font-weight: normal;
   letter-spacing: 0.03em;
@@ -53,7 +53,7 @@ img {
 body.home {
   display: flex;
   flex-direction: column;
-  font-family: Futura;
+  font-family: 'Lato', sans-serif;
   text-align: center;
   font-weight: bold;
   color: pink;
@@ -64,6 +64,7 @@ body.home {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 body.home h1 {
@@ -103,6 +104,16 @@ body.gallery p {
   font-size: .8em !important;
   color: rgb(244, 232, 207) !important;
   text-shadow: 0 0 .3rem black;
+}
+
+a img {
+  padding-bottom: 7px;
+  transition: 0.3s ease-in-out !important;
+}
+
+a:hover img {
+  transform: scale(1.025);
+  transition: 0.2s ease-in-out !important;
 }
 
 .col-sm-6 {
@@ -360,7 +371,6 @@ body.edit {
   overflow: hidden;
 }
 
-/* New view CSS */
 body.new {
   background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
   background-size: cover;
@@ -384,7 +394,7 @@ form {
 }
 
 .form-control {
-  font-family: Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -397,10 +407,19 @@ form {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
+/* Error404 view */
+body.error404 {
+  background-image: url("https://d8st7idcnjoas.cloudfront.net/galfull/CT-612.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
-  font-family: Futura;
+  font-family: 'Lato', sans-serif;
   font-size: 1.1em;
   top: 0;
   left: 0;
@@ -419,7 +438,7 @@ form {
 
 .nav-link {
   color: rgb(244, 232, 207) !important;
-  -webkit-text-stroke: 1px black;
+  /* -webkit-text-stroke: 1px black; */
   font-size: 1.2em !important;
   transition: 0.3s ease-in-out !important;
 }
@@ -443,7 +462,7 @@ form {
   font-size: 2.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 .btn-primary:hover {
