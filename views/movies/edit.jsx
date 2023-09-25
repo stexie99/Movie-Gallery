@@ -25,12 +25,12 @@ function edit_form(data) {
           <form method="POST" action={`/movies/${data.movie.id}?_method=PUT`}>
             <div className="form-group">
               <label htmlFor="title">Movie Title</label>
-              <select
+              <input
                 className="form-control"
                 id="title"
                 name="title"
                 defaultValue={data.movie.title}
-              >
+              />
             </div>
             <div className="form-group">
                         <label htmlFor="year">Release Year</label>
