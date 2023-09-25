@@ -26,8 +26,6 @@ app.get('*', (req, res) => {
     res.render('Error404')
 })
 
-
-
 // DB connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('DB connected'))

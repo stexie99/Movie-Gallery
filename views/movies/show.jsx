@@ -21,7 +21,7 @@ function show(data) {
                 Directed by {data.movie.director}
               </p>
               <p>
-                Released: {data.movie.year}
+              Release Year: {data.movie.year}
               </p>
               <p>Genre: {data.movie.genre}</p>
               <br />
