@@ -327,9 +327,5 @@ module.exports = [
     year: "2005",
     director: "Peter Jackson",
     genre: "Action, Adventure, Drama",
-  },
-  {
-    
-  },
-  
+  }
 ]

@@ -4,9 +4,15 @@ const movieSeedData = require("../models/movieSeedData.js")
 
 //data seeding
 router.get("/data/seed", async (req, res) => {
-  await Movie.insertMany(movieSeedData)
-  res.redirect("/movies")
+  try {
+    await Movie.insertMany(movieSeedData)
+    res.redirect("/movies");
+  } catch (error) {
+    console.error("Error seeding data:", error)
+    res.status(500).send("Internal Server Error")
+  }
 })
+
 //get index page
 router.get("/", async (req, res) => {
   const movies = await Movie.find()
