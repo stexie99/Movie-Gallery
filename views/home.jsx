@@ -5,8 +5,8 @@ function Home() {
   return (
     <Default title="Home">
       <body className="home">
-        <h1>Milestone Project 2</h1>
-        <h2>Welcome to our movie app!</h2>
+        <h1>The Movie Gallery</h1>
+        <h2>A collection of movies loved by all!</h2>
         <a href="/movies">
           <button className="btn-primary">Movie Gallery</button>
         </a>
