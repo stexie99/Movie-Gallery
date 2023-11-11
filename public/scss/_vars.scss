@@ -1,0 +1,18 @@
+$font: 'Lato', 'sans-serif';
+$text-color: rgb(244, 232, 207);
+$text-color-2: #ed8d00;
+
+
+
+@mixin bg-style{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@mixin text-style {
+    color:$text-color;
+    font-family:$font;
+    text-align:center;
+}

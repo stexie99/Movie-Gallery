@@ -1,0 +1,92 @@
+@use 'vars';
+
+body{
+    font-family:vars.$font;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &.gallery{
+        background-image: url("https://images.pexels.com/photos/2312040/pexels-photo-2312040.jpeg");
+        @include vars.bg-style;
+
+        h1,h2,p{
+            color:vars.$text-color;
+        }
+    }
+
+    &.show{
+        background-image: url("https://media.npr.org/assets/img/2023/03/08/gettyimages-1145944808_custom-c4059a3b99d086477c3e91fc1058b7122431555e-s1600-c85.webp");
+        @include vars.bg-style;
+    }
+
+    &.home{
+        background-image: url("https://live.staticflickr.com/65535/50243040877_a95ca8b6c8_k.jpg");
+        @include vars.bg-style;
+        h1,h2{
+            color:vars.$text-color-2;
+        }
+    }
+
+    &.edit{
+        background-image: url("https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
+        @include vars.bg-style;
+    }
+
+    &.new{
+        background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
+        @include vars.bg-style;
+    }
+}
+
+
+h1,h2,h3,h4,p{
+    @include vars.text-style;
+}
+
+.navbar{
+    position:fixed;
+    font-family: vars.$font;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 4em !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+    text-decoration: none;
+}
+
+img {
+    margin: auto;
+    width: 75%;
+    vertical-align: top;
+}
+
+.col-sm-6 img,
+.col-md-6 img,
+.col-lg-4 img,
+.col-xl-3 img,
+.col-xxl-2 img {
+  width: 100%;
+  height: auto;
+}
+
+.col-sm-6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center !important;
+}
+
+.col-md-4 img {
+    height: 70vh;
+    object-fit: contain;
+}
+
+.col-md-8 {
+    margin: 0 auto;
+    padding: .75rem;
+    font-size: 1.3rem;
+}
+
