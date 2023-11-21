@@ -1,11 +1,12 @@
 # Milestone-2-Project-The-Movie-Gallery
+deployed at https://movie-gallery-gl39.onrender.com/
 
-The Movie Gallery project offers the opportunity for anyone to add and edit movies in their collection.
+The Movie Gallery project offers the opportunity for anyone to add, edit and delete movies in the collection.
 This app was designed with the user in mind. We made a point to focus on making the app visually pleasing 
 with a smooth transition from one screen to the next. Our ultimate goal is to maintain optimal backend functionality that translates to a seamless front-end. 
 
-The project is designed using the MERN (MongoDb Express React Node) full-stack application developmental practices that implement full
-CRUD (Create Read Update Delete) functionality.
+The project is designed using the MERN (MongoDB, Express, React, and Node) full-stack application developmental practices that implement full
+CRUD (Create, Read, Update, and Delete) functionality.
 
 ## References:
 
