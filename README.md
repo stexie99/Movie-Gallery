@@ -36,10 +36,21 @@ used to aid with formatting, CSS, CLI, and installation issues
 All movie posters sourced from [movieposterdb.com](https://www.movieposterdb.com/) with the exception of:
 
 [Gadar 2](https://www.imdb.com/title/tt15441054/)
+
 [Kung Fu Panda](https://www.amazon.com/Kung-Panda-Widescreen-Jack-Black/dp/B001ECQ75A)
+
 [The Super Mario Bros](https://www.thesupermariobros.movie/character-gallery/)  
+
 [The Goonies](https://xl.moviepxl_59113_cad39c9e.jpgosterdb.com/05_09/1985/0089218/xl_51014_0089218_1e6b1771.jpg?v=2023-09-16%2011:48:49)
 
 [Background for New.jsx page](https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais)
 
 [Background for Edit.jsx page](https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais)
+
+## Future Features:
+
+Rating system
+
+Comment section
+
+Sorting by year, genre and title
