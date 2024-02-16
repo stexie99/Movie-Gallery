@@ -9,6 +9,14 @@ CRUD (Create, Read, Update, and Delete) functionality.
 
 Deployed at https://movie-gallery-gl39.onrender.com/
 
+## Future Features:
+
+Rating system
+
+Comment section
+
+Sorting by year, genre, and title
+
 ## References:
 
 [W3W Schools](https://www.w3schools.com)
@@ -48,10 +56,4 @@ All movie posters sourced from [movieposterdb.com](https://www.movieposterdb.com
 
 [Background for Edit.jsx page](https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais)
 
-## Future Features:
 
-Rating system
-
-Comment section
-
-Sorting by year, genre and title
